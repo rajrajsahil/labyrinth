@@ -1,12 +1,5 @@
 <?php 
-require_once 'connect.php';
-require_once 'user.php';
-
-
-
-$user = new user($pdo);
-
-
+include 'connect.php';
 
 $functionname = $_POST['functionname'];
 
@@ -17,11 +10,11 @@ $password = $_POST['password'];
 
  echo $user->login($credentials, $password);
 }
-if($functionname=="logout")
+else if($functionname=="logout")
 {
  echo $user->logout();
 }
-if($functionname=="signup")
+else if($functionname=="signup")
 {
 	$username = $_POST['username'];
 	$password1 = $_POST['password1'];

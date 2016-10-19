@@ -71,7 +71,7 @@ $(document).ready(function (argument) {
 				success:function(result){
 					if(result==true){
 
-				       		window.location = "/level/level1.php";
+				       		window.location = "level1.php";
 				       	}
 				       	else{
 				       		alert("invalid input");

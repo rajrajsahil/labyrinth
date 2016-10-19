@@ -2,7 +2,6 @@
 session_start();
 
 
-
 if (isset($_SESSION['username'])) {
 		header ('Location: level1.php');
 
@@ -22,8 +21,8 @@ if (isset($_SESSION['username'])) {
 
 		
    <button id='login-button'>LogIn</button> 
-   <br><br><br><br><br><br>
-   	<input  id='username' type = 'text' placeholder="Username " >
+   <br>
+   	<input  id='username' type = 'text' placeholder="Username" >
    	<input  id='email' type = 'text' placeholder="email" >
    	<input  id='contact' type = 'text' placeholder="contact" >
 				
