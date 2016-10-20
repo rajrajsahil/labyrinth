@@ -11,14 +11,15 @@ class User {
 
 	public function login ($credentials, $password) {
 		try{
-			$stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:name AND password=:pass");
-			$stmt->execute(array(":name"=>$credentials, ":pass"=>$password));
+			$stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:name OR email=:email AND password=:pass");
+			$stmt->execute(array(":name"=>$credentials, ":email"=>$credentials, ":pass"=>$password));
 			$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 			if($stmt->rowCount() > 0)
-          		{
+          		{ 
              
                 $_SESSION['username'] = $userRow['username'];
-                return true;
+                $level = $userRow['level'];
+                return $level;
              
              
           		}
@@ -80,6 +81,21 @@ class User {
     echo "New record created successfully";
          
          }*/
+         try{
+         	$stmt = $this->db->prepare("SELECT password FROM user_details WHERE username=:username");
+         	$stmt->execute(array(":username"=>$username));
+         	$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+         	if($stmt->rowCount>0)
+         	{
+         		return "This username already exist";
+         	}
+         }
+         catch(PDOException $e)
+         {
+         	echo "Error: " . $e->getMessage();
+         }
+
+
        try{
          $stmt = "INSERT INTO user_details (username, password, email,contact)VALUES ('$username', '$password', '$email','$contact')";
     		// use exec() because no results are returned

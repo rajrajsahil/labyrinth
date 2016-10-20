@@ -20,12 +20,17 @@ $(document).ready(function (argument) {
 				{
 
 				       	//alert(result);
-				       	if(result==true){
+				       		if(result==false){
 
-				       		window.location = "level1.php";
+				       		//window.location = "level1.php";
+				       		alert("invalid input");
 				       	}
 				       	else{
-				       		alert("invalid input");
+				       		var glevelno = result;
+				       		var glevel  ='level'+result;
+				       		window.location = glevel;
+				       		//alert(glevel);
+				       		//alert("invalid input");
 				       	}
 				}
 				       
@@ -71,7 +76,11 @@ $(document).ready(function (argument) {
 				success:function(result){
 					if(result==true){
 
-				       		window.location = "/level/level1.php";
+				       		window.location = "level1.php";
+				       	}
+				       	else if(result ="This username already exist")
+				       	{
+				       		alert(result);
 				       	}
 				       	else{
 				       		alert("invalid input");
