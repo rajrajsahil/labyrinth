@@ -2,7 +2,7 @@
 
 $DB_host = "localhost";
 $DB_user = "root";
-$DB_pass = "Sahil@Raj1998";
+$DB_pass = "";
 $DB_name = "labyrinth";
 
 try {

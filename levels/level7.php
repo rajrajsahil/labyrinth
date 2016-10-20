@@ -19,15 +19,15 @@ if (!isset($_SESSION['username'])) {
 
 		hello <?php
     echo $_SESSION['username'];
-    echo "<br>"."level=1";
+    echo "<br>"."level=7";
     ?>
    <button id='logout-button'>LogOut</button> 
    <br>
    <br>
-   <div>QUES:5%4=</div>
+   <div>QUES:3+4=</div>
    
-      <input   id='level1-ans' placeholder="Enter Your Ans">
-  <button id='submit1-button'>SUBMIT</button>
+      <input   id='level7-ans' placeholder="Enter Your Ans">
+  <button id='submit7-button'>SUBMIT</button>
   <!-- <br><br><br><br><br><br>
    	<input  id='username' type = 'text' placeholder="Username " >
    	<input  id='email' type = 'text' placeholder="email" >
