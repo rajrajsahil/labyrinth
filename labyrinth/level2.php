@@ -1,9 +1,9 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username'])||$_SESSION['level']!=2) {
 	header ('Location: index.php');
 }
-
+echo $_SESSION['level'];
 
 
 ?>
@@ -45,7 +45,10 @@ if (!isset($_SESSION['username'])) {
  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
  <script src="loginclass.js" ></script>
- <script src="levels.js" ></script>
-
+ 
 </body>
 </html>
+<?php
+include "winner.php";
+
+?>

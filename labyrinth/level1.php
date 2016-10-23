@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
+if (!isset($_SESSION['username'])||$_SESSION['level']!=1) {
 	header ('Location: index.php');
 }
 
@@ -37,3 +37,7 @@ if (!isset($_SESSION['username'])) {
 
 </body>
 </html>
+<?php
+include "winner.php";
+
+?>

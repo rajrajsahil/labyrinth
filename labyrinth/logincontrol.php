@@ -1,14 +1,11 @@
 <?php 
 include 'connect.php';
-
 $functionname = $_POST['functionname'];
-
 if($functionname=="login")
   {
 	$credentials = $_POST['credentials'];
 	$password = $_POST['password'];
-
-	 echo $user->login($credentials, $password);
+	echo $user->login($credentials, $password);
   }
 else if($functionname=="logout")
   {
@@ -20,16 +17,17 @@ else if($functionname=="signup")
 	  $password1 = $_POST['password1'];
 	  $email = $_POST['email'];
 	  $contact = $_POST['contact'];
-	  echo $user->signup($username, $password1,$email,$contact); ;
+	  echo $user->signup($username, $password1,$email,$contact);
   }
-if($functionname=="getusername")
+else if($functionname=="getusername")
   {
 	 echo $user->getusername();
   }
-if($functionname=="nextlevel")
+else if($functionname=="nextlevel")
   {
 	$answer = $_POST['answer'];
 	echo $user->nextlevel($answer);
+	//echo "incorrect answer";
 
 
   }

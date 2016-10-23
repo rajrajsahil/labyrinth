@@ -1,50 +1,44 @@
 $(document).ready(function (argument) {
-
 	var credentials, password,username,password1,email,contact,functionname;
-	$('#login-button').click(function(event) {
+	$('#login-button').click(function(event){
 	    credentials = $('#user-credentials').val();
 		password = $('#user-password').val();
-	    
-		$.ajax({
+	    $.ajax({
 				url: "logincontrol.php",
 				data : {credentials : credentials, 
-					password : password ,
-					functionname:"login"},
+				password : password ,
+				functionname:"login"},
 				type: "POST",
-				
 				success:function(result)
 				{
-
-				       	//alert(result);
-				       		if(result==false){
-				       		alert("invalid input");
-				       	     }
-				       	    else{
-				       		
-				       		alert(result);
-				       		window.location = "level"+result+".php";
+					//alert(result);
+				    if(result==false)
+				    {
+				    	alert("invalid input");
+				    }
+				    else
+				    {
+				       	alert(result);
+				       	window.location = "level"+result+".php";
 				       		//alert(glevel);
 				       		//alert("invalid input");
-				         	}
+				    }
 				}
 			
 		});
-		
 	});
-	$('#logout-button').click(function(event) {		       
-         
-		$.ajax({
+	$('#logout-button').click(function(event){		       
+        $.ajax({
 				url: "logincontrol.php",
 				data : {functionname:"logout"},
 				type: "POST",
 				success: function (result) {
-
-					window.location = 'index.php';
-			     }
+				window.location = 'index.php';
+			    }
 		}); 
 	});
 
-	$('#signup-button').click(function(event) {
+	$('#signup-button').click(function(event){
 		event.preventDefault(event);
 		username = $('#username').val();
 		password1 = $('#password').val();
@@ -59,23 +53,22 @@ $(document).ready(function (argument) {
 				functionname:"signup" },
 				type: "POST",
 				success:function(result){
-				           if(result==1){
-                            alert("new data added");
-				       		window.location = "level1.php";
+				           if(result==1)
+				           {
+                            	alert("new data added");
+				       			window.location = "level1.php";
 				       	   }
 				       	   else if(result =="This username already exist")
 				       	   {
-				       		alert(result);
+				       			alert(result);
 				       	   }
 
 				}
 
 		});
-		
 	});
-	$('.level-answerbutton').click(function(event) {
-
-		var currentuser;
+	$('.level-answerbutton').click(function(event){
+		/*var currentuser;
 		$.ajax({
 				url: "logincontrol.php",
 				data : {functionname:"getusername"},
@@ -84,10 +77,9 @@ $(document).ready(function (argument) {
                 currentuser=result;
 				alert(currentuser);
 				}
-		});
-		    
-	    var answer=$('.level-answer').val();
-        console.log(answer);
+		});*/
+		var answer=$('.level-answer').val();
+        //console.log(answer);
 		$.ajax({
 				url: "logincontrol.php",
 				data : {functionname:"nextlevel",answer:answer},
@@ -96,7 +88,7 @@ $(document).ready(function (argument) {
 				success:function(result)
 				{
                         if(result<=20){
-					       	alert("moved to level "+result);
+					       	//alert("moved to level "+result);
 					        window.location="level"+result+".php";
 				        }  
 				        else if(result>20)
@@ -109,8 +101,6 @@ $(document).ready(function (argument) {
 				        {
 				        	alert(result);
 				        }
-
-
 				}
 				       
 
