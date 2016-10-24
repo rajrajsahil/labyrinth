@@ -28,7 +28,5 @@ else if($functionname=="nextlevel")
 	$answer = $_POST['answer'];
 	echo $user->nextlevel($answer);
 	//echo "incorrect answer";
-
-
-  }
+}
 ?>

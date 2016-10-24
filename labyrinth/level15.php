@@ -36,3 +36,7 @@ if (!isset($_SESSION['username'])||$_SESSION['level']!=15) {
 
 </body>
 </html>
+<?php
+include "winner.php";
+
+?>
