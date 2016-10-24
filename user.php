@@ -2,7 +2,7 @@
 session_start();
 class User {
 
-	public $db;
+	private $db;
 
 	function __construct ($DB_conn) {
 		$this->db = $DB_conn;
