@@ -1,4 +1,13 @@
+function preloader(){
+	setTimeout(function(){
+        $('body').addClass('loaded');
+    }, 6000);
+}
+
 $(document).ready(function(){
+
+	
+
 	$('#background').mouseParallax({ moveFactor: 2 });
 	$(document).on('click', "#signIn", function () {
 		$('.loginHome').fadeOut(300);

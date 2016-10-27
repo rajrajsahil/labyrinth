@@ -9,11 +9,41 @@ if (isset($_SESSION['username'])) {
 <head>
    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    <title>Labyrinth 7.0 | Spring Fest 2017</title>
-   <link rel="shortcut icon" href="favicon.png">
+   <link rel="shortcut icon" href="images/favicon.png">
    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/preloader.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body>
+<body onload="preloader()">
+   <div id="loader-wrapper">
+      <div id="loader">
+         <div class="content">      
+            <div class="circle">
+               <span class="dot no1">s</span>
+               <span class="dot no2"></span>
+               <span class="dot no3"></span>
+               <span class="dot no4"></span>
+               <span class="dot no5"></span>
+               <span class="dot no6"></span>
+               <span class="dot no7"></span>
+               <span class="dot no8"></span>
+               <span class="dot no9"></span>
+               <span class="dot no10"></span>
+               <span class="dot no11"></span>
+               <span class="dot no12"></span>
+               <span class="dot no13"></span>
+               <span class="dot no14"></span>
+               <span class="dot no15"></span>
+            </div>
+         </div>
+      </div>
+      <div class="loader-section section-left">
+         <div id="loadFest">#Sf2k17</div>
+      </div>
+      <div class="loader-section section-right">
+         <div id="hashTag">#labyrinth7.0</div>
+      </div>
+   </div>
    <div id="background" class="mouse-bg" style="background-image: url('images/bg.png');"></div>
    <div class="foreground"></div>
    <div id="inner">
