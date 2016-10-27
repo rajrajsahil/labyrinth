@@ -1,8 +1,16 @@
 <?php
-session_start();
-if (isset($_SESSION['username'])) {
-	header ('Location: level1.php');
-}
+
+ session_start();
+ if (isset($_SESSION['username']))
+ {
+    
+   if($_SESSION["level"]>20){
+     header ("Location: levels/congratulations.php");
+   }
+   else {
+       header ("Location:"."levels/level".$_SESSION["level"].".php");
+   }
+ }
 ?>
 <!DOCTYPE html>
 <html>
@@ -160,7 +168,7 @@ if (isset($_SESSION['username'])) {
    <button id='signup-button'>Signup</button> --> 
 
    <script src="script/jquery.js"></script>
-   <script src="loginclass.js" ></script>
+   <script src="script/loginclass.js" ></script>
    <script src="script/mouse.parallax.js"></script>
    <script src="script/script.js"></script>
 </body>
