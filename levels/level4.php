@@ -1,12 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['username'])) {
-	header ('Location: index.php');
-}
-
-
-
-?>
+$pagen = 4;
+include "../levels.php";
+?> 
 <!DOCTYPE html>
 <html>
 
@@ -15,37 +10,19 @@ if (!isset($_SESSION['username'])) {
 
 </head>
 <body>
-
-
-		hello <?php
-    echo $_SESSION['username'];
-    echo "<br>"."level=4";
+    hello 
+    <?php
+        echo $_SESSION['username'];
+        echo "<br>"."level=4";
     ?>
-   <button id='logout-button'>LogOut</button> 
-   <br>
-   <br>
-   <div>QUES:2*2=</div>
-   
-      <input   id='level4-ans' placeholder="Enter Your Ans">
-  <button id='submit4-button'>SUBMIT</button>
-  <!-- <br><br><br><br><br><br>
-   	<input  id='username' type = 'text' placeholder="Username " >
-   	<input  id='email' type = 'text' placeholder="email" >
-   	<input  id='contact' type = 'text' placeholder="contact" >
-				
-   <input   id='password' placeholder="Password">
-   <input   id='re-password' placeholder="Re-Password">
-
-		
-   <button id='signup-button'>Signup</button> 
-
--->
-
-
- <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
- <script src="loginclass.js" ></script>
- <script src="levels.js" ></script>
-
+    <button id='logout-button'>LogOut</button> 
+    <br>
+    <br>
+    <div>QUES:2*2=</div>
+    <input   id='level4-ans' class="level-answer" placeholder="Enter Your Ans">
+    <button id='submit4-button' class="level-answerbutton">SUBMIT</button>
 </body>
 </html>
+<?php
+    include "../modal/winner.php";
+?>

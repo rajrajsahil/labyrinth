@@ -1,127 +1,137 @@
 <?php
 session_start();
 class User {
-
-	public $db;
-
-	function __construct ($DB_conn) {
-		$this->db = $DB_conn;
-		
-	}
-
-	public function login ($credentials, $password) {
-		try{
-			$stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:name OR email=:email AND password=:pass");
-			$stmt->execute(array(":name"=>$credentials, ":email"=>$credentials, ":pass"=>$password));
-			$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
-			if($stmt->rowCount() > 0)
+      private $db;
+      function __construct ($DB_conn)
+      {
+		    $this->db = $DB_conn;
+		  }
+      //public function redirect($username);
+	    public function login ($credentials, $password)
+      {
+		    try{
+      			$stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:name AND password=:pass");
+      			$stmt->execute(array(":name"=>$credentials, ":pass"=>$password));
+      			$user=$stmt->fetch(PDO::FETCH_ASSOC);
+      			
+            if($stmt->rowCount() > 0)
           		{ 
-             
-                $_SESSION['username'] = $userRow['username'];
-                $level = $userRow['level'];
-                return $level;
-             
-             
-          		}
+                if($user['status']>0)
+                {
+                  $_SESSION['username'] = $user['username'];
+                  $level = $user['level'];
+                  $_SESSION['level']=$level;
+                 return $level;
+                }
+                else
+                {
+                  return false;
+                }
+          		} 
           	else{
-          		return false;
+          		  return false;
           	}
-		}
-		catch(PDOException $error){
-			echo "Error: " . $error->getMessage();
-		}
-		/*try {
+		  }
+		    catch(PDOException $error){
+			      echo "Error: " . $error->getMessage();
+	      }
 
-			$stmt = $this->db->prepare("SELECT * FROM checks WHERE username=:uname AND pasword=:pass");
-			$stmt->execute (array (':uname' => $credentials,':pass' => $password));
-			if($stmt->rowCount ()>0){
-				return true;
-			}
-
-			if ($stmt->rowCount () == 1) {
-
-				$userRow = $stmt->fetchObject ();
-
-				if ($password == $userRow->password) {
-
-					$_SESSION['username'] = $userRow->username;
-					$_SESSION['level'] = $userRow->level;
-					$_SESSION['id'] = $userRow->id;
-
-
-
-					return true;
-				} else {
-					return false;
-				}
-			} else {
-				return false;
-			}
-		} catch (PDOException $error) {
-			echo $error->getMessage ();
-		}*/
-
-	}
+	    }
     
-	public function logout() {
-	session_destroy();
-	return false;
-	}
+	    public function logout()
+      {
+    	  session_destroy();
+    	  return false;
+	    }
 
 
-	public function signup ($username,$password,$email,$contact) {
-
-      /*try 
-        {
-		    //$stmt = 'INSERT INTO user_details (username, password, email,contact,level)VALUES ("$username", "$password "," $email","$contact","1")';
-		    // use exec() because no results are returned
-    $conn=$GLOBALS['pdo'];
-    $sql ="INSERT INTO user_details VALUES ($username, $password , $email,$contact,1)";    
-    $conn->exec($sql);
-    echo "New record created successfully";
-         
-         }*/
-         try{
-         	$stmt = $this->db->prepare("SELECT password FROM user_details WHERE username=:username");
-         	$stmt->execute(array(":username"=>$username));
-         	$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
-         	if($stmt->rowCount>0)
-         	{
-         		return "This username already exist";
-         	}
+	    public function signup ($username,$password,$email,$contact)
+      {
+        try{
+         	  $stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:username");
+         	  $stmt->execute(array(":username"=>$username));
+         	  $checkuser=$stmt->fetch(PDO::FETCH_ASSOC);
+            if($stmt->rowCount()>0)
+         	  {
+         		  return "This username already exist";
+         	  }
          }
          catch(PDOException $e)
          {
-         	echo "Error: " . $e->getMessage();
+         	  return "Error: " . $e->getMessage();
          }
+         $level=1;
+        try{
+            $stmt = "INSERT INTO user_details (username, password, email,contact,level)VALUES ('$username', '$password', '$email','$contact','$level')";
+    		    // use exec() because no results are returned
+    	      $this->db->exec($stmt);
+            $time =time();
+            $stmt1 = "INSERT INTO timing (username,current,regtime) VALUES ('$username','$time','$time')";
+            $this->db->exec($stmt1);
+   		      //echo "New record created successfully";
+    	      $_SESSION["username"]=$username;
+            $_SESSION["level"]=$level;
+    	      return true;
+        }
+        catch(PDOException $e)
+        {
+       	  echo "Error: " . $e->getMessage();
+ 		    }
+      }
+     //  public function getusername()
+	    // {
+     //     return $_SESSION['username'];
+     //  }
+      public function winner()
+      {
+        $stmt = $this->db->prepare("SELECT username FROM timing ORDER BY level DESC,current ASC LIMIT 10");
+        $stmt->execute();
+        $winnerlist = $stmt->fetchAll();
+        return $winnerlist;
+      }
+      public function nextlevel($answer)
+	     {
+	   	    $username=$_SESSION['username'];
+          //$stmt1 = $this->db->prepare("SELECT * FROM user_details WHERE username=:username");
+         	//$stmt1->execute(array(":username"=>$username));
+         	//$userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
+
+          $level=$_SESSION['level'];
+          $levelname = "level".$level;
+         	//$nextlevel=$level+1;
+
+            
+          $stmt2 = $this->db->prepare("SELECT * FROM level_answer WHERE level=:level");
+         	$stmt2->execute(array(":level"=>$level));
+         	$ans=$stmt2->fetch(PDO::FETCH_ASSOC); 
+         	$correctanswer=$ans['answer'];
+          //return $correct_answer;
+
+         	if($answer==$correctanswer)
+                {
+                    $stmt3 = $this->db->prepare("UPDATE user_details SET level=level+1 WHERE username=:username");
+             		    $stmt3->execute(array(":username"=>$username));
+
+                    $stmt4 = $this->db->prepare("UPDATE timing SET `level`=level+1,current=:pass, $levelname=:pass WHERE username=:username");
+                    $stmt4->execute(array(":username"=>$username, ":pass"=>time()));
+
+                    // $stmt5 = $this->db->prepare("UPDATE timing SET current=:pass, $pass=:pass WHERE username=:username");
+                    // $stmt5->execute(array(":username"=>$username, ":pass"=>time()));
+                    $_SESSION['level']++;
+             		    return  $level+1;
+         
+         	      }
+         	else
+             	{
+             		   return "incorrect answer";
+             	}
 
 
-       try{
-         $stmt = "INSERT INTO user_details (username, password, email,contact)VALUES ('$username', '$password', '$email','$contact')";
-    		// use exec() because no results are returned
-    	$this->db->exec($stmt);
-   		 //echo "New record created successfully";
-    	$_SESSION["username"]=$username;
-    	return true;
-         }
-    catch(PDOException $e)
-       {
-       	    
-            echo "Error: " . $e->getMessage();
- 		}
-     }
-	/*public function isLoggedIn () {
-		if (isset ($_SESSION['username'])) {
-			//echo 'in';
-			return true;
-		}
-		//echo 'out';
-		return false;
-	}
+         	
 
-	public function redirect ($url) {
-		header ("Location: ". $url);
-	}
-*/
+	 }
+
+      
+
 	
 }
