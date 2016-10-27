@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `aa` (
-  `id` int(10) NOT NULL,
-  `level1` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `id` int( 10 ) NOT NULL,
+  `level1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ;
 
 --
