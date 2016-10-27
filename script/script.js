@@ -6,7 +6,16 @@ function preloader(){
 
 $(document).ready(function(){
 
-	
+	setInterval( function() {
+		var r = Math.floor(Math.random()*255);
+		var g = Math.floor(Math.random()*255);
+		var b = Math.floor(Math.random()*255);
+		$('.foreground').css('background-color','rgba('+r+','+g+','+b+',0.7)');
+	}, 300000);
+
+	$( document ).ajaxComplete(function( event,request, settings ) {
+	  $( "#msg" ).append( "<li>Request Complete.</li>" );
+	});
 
 	$('#background').mouseParallax({ moveFactor: 2 });
 	$(document).on('click', "#signIn", function () {

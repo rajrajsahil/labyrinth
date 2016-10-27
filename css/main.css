@@ -28,13 +28,15 @@ body{
 }
 .foreground{
 	position: fixed;
-	/*background-color: rgba(255,165,0,0.7);*/
 	background-color: rgba(0,285,212,0.7);
 	z-index: 1;
 	left: 0;
 	right: 0;
 	bottom: 0;
 	top: 0;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	transition: all 1s;
 }
 #inner{
 	position: fixed;
