@@ -274,10 +274,10 @@ input:focus:-ms-input-placeholder {
 	color:white;
 	cursor: pointer;
 	outline: none;
-
+	text-decoration: underline;
 }
 .noAcBtn:hover{
-	text-decoration: underline;
+	text-decoration: none;
 }
 .signUpPage{
 	padding: 40px;
