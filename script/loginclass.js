@@ -1,127 +1,87 @@
-/*$(document).ready(function (argument) {
-	var credentials, password,username,password1,email,contact,functionname;
-	$('#login-button').click(function(event){
-	    credentials = $('#user-credentials').val();
-		password = $('#user-password').val();
-	    $.ajax({
-				url: "logincontrol.php",
-				data : {credentials : credentials, 
-				password : password ,
-				functionname:"login"},
-				type: "POST",
-				success:function(result)
-				{
-					//alert(result);
-				    if(result==false)
-				    {
-				    	alert("invalid input");
-				    }
-				    else
-				    {
-				       	alert(result);
-				       	window.location = "level"+result+".php";
-				       		//alert(glevel);
-				       		//alert("invalid input");
-				    }
-				}
-			
-		});
-	});
-	$('#logout-button').click(function(event){		       
-        $.ajax({
-				url: "logincontrol.php",
-				data : {functionname:"logout"},
-				type: "POST",
-				success: function (result) {
-				window.location = 'index.php';
-			    }
-		}); 
-	});
-
-	$('#signup-button').click(function(event){
-		event.preventDefault(event);
-		username = $('#username').val();
-		password1 = $('#password').val();
-		email=$('#email').val();
-		contact=$('#contact').val();
-		$.ajax({
-				url: "logincontrol.php",
-				data : {username : username, 
-				password1 : password1,
-				email:email,
-				contact:contact,
-				functionname:"signup" },
-				type: "POST",
-				success:function(result){
-				           if(result==1)
-				           {
-                            	alert("new data added");
-				       			window.location = "level1.php";
-				       	   }
-				       	   else if(result =="This username already exist")
-				       	   {
-				       			alert(result);
-				       	   }
-
-				}
-
-		});
-	});
-	$('.level-answerbutton').click(function(event){
-		//var currentuser;
-		//$.ajax({
-				//url: "logincontrol.php",
-				//data : {functionname:"getusername"},
-				//type: "POST",
-				//success: function (result) {
-                //currentuser=result;
-				//alert(currentuser);
-				//}
-		//});
-		var answer=$('.level-answer').val();
-        //console.log(answer);
-		$.ajax({
-				url: "logincontrol.php",
-				data : {functionname:"nextlevel",answer:answer},
-				type: "POST",
-				
-				success:function(result)
-				{
-                        if(result<=20){
-					       	//alert("moved to level "+result);
-					        window.location="level"+result+".php";
-				        }  
-				        else if(result>20)
-				        {
-				        	alert("congratulation");
-				        	window.location="congratulations.php";
-
-				        } 
-				        else if(result=="incorrect answer")
-				        {
-				        	alert(result);
-				        }
-				}
-				       
-
-				
-
-		});
-	});
-});	*/
 $(document).ready(function (argument) {
 
-	var credentials, password,username,password1,email,contact,functionname,password2;
+	var credentials, password,username,password1,email,contact,functionname,password2,placeholder;
+	var signupflag=0;
+	usernameplaceholder= $('#username').attr("placeholder");
+	passwordplaceholder= $('#assword').attr("placeholder");
+	repasswordplaceholder= $('#re-password').attr("placeholder");
+	emailplaceholder= $('#email').attr("placeholder");
+	contactplaceholder= $('#contact').attr("placeholder");
+	credentialplaceholder=$('#user-credentials').attr("placeholder");
+	passplaceholder=$('#user-password').attr("placeholder");
+
+   
+    
+	$(".inputType").focusout(function() {
+		if($(this).val()=='')
+		{   
+			     
+			$(this).css({"border": "2px solid red"});
+			$(this).attr('placeholder',"*required field");
+		}
+		else
+		{
+			$(this).css({"border": "2px solid white"});
+			
+		}
+        
+
+    });
+	$(".inputType").focusin(function() {
+        $(this).css({"border": "2px solid white"});
+    });
+
+
+
+
+// ********************************SIGN IN VALIDATION AND SIGNIN ***************************************************************
+	$("#user-credentials").focusout(function() {
+		credentials = $('#user-credentials').val();
+        if(credentials !='')
+        {
+			    if (! /^[a-zA-Z0-9_]+$/.test(credentials)||credentials.length<4)
+			    {	
+			    	$(this).val("");
+		    	    $(this).css({"border": "2px solid red"});
+					$(this).attr('placeholder',"Not a valid username ..");
+					
+				}
+			
+
+	    }
+
+    });
+    $("#user-credentials").focusin(function(e) {
+    	$(this).val(credentials);
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',credentialplaceholder);
+    });
+     $("#user-password").focusin(function(e) {
+    	
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',passplaceholder);
+    });  
+
+
 	$('#login-button').click(function(event) {
 	    credentials = $('#user-credentials').val();
 		password = $('#user-password').val();
-	    if(credentials=='')
+		if(credentials=='' && password=='')
+		{
+	    	$("#user-credentials").attr('placeholder','* Required field');
+	    	$("#user-credentials").css({"border": "2px solid red"});
+        	$("#user-password").attr('placeholder','* Required field');
+        	$("#user-password").css({"border": "2px solid red"});	    	
+		}
+	    else if(credentials=='')
 	    {
-	    	alert("enter username");
+	    	$("#user-credentials").attr('placeholder','* Required field');
+	    	$("#user-credentials").css({"border": "2px solid red"});
 	    }
         else if (password=='')
         {
-        	alert("enter password");
+        	$("#user-password").attr('placeholder','* Required field');
+        	$("#user-password").css({"border": "2px solid red"});
         }
         else{
 				$.ajax({
@@ -160,6 +120,7 @@ $(document).ready(function (argument) {
 				});
 		}
 	});
+	// ********************************SIGN IN VALIDATION AND SIGNIN FUNCTION OVER ***************************************************************
 	$('#logout-button').click(function(event) {		       
          
 		$.ajax({
@@ -172,153 +133,208 @@ $(document).ready(function (argument) {
 			     }
 		}); 
 	});
-    function formvalidation()
-    {
+
+
+
+
+
+// ********************************SIGN UP VALIDATION AND SIGNUP ***************************************************************
+
+	$("#username").focusout(function(e) {
 		username = $('#username').val();
-		password1 = $('#password').val();
-		password2=$('#re-password').val();
-		email=$('#email').val();
-		contact=$('#contact').val();
-		contactvalidation=contact;
-		/*
-    
-		*/
-
-		
-	    if (! /^[a-zA-Z0-9_]+$/.test(username)||username.length<4) 
-	    {	
-    		alert("Only letters numbers and underscore is allowed in username and shoud be more than three letters");
-    		return false;
-		}
-        else if (email=='')
-        {
-        	alert("compulsory field email");
-        	return false;
-        } 
-        else if(contact=='')
-        {
-        	alert("compulsory field contact");
-        	return false;
-        }
-        else if (contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')>0 && contactvalidation.toString().length!=14)
-        {
-        	alert("not a valid contact no");
-        	return false;
-        }
-        else if(contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().length!=13)
-        {
-        	    alert("not a valid contact no");	
-        	    return false;
-        }
-        else if(contactvalidation.toString().indexOf('+')==-1 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().length!=10)
-        {
-        		alert("not a valid contact no");
-        		return false;
-        }
-        else if(contactvalidation.toString().indexOf('+')==-1 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().indexOf('0')==0 && contactvalidation.toString().length!=11)
-        {
-        		alert("not a valid contact no");
-        		return false;
-        }         
-        else if (password1=='' || password2=='')
-        {
-        	alert("compulsory field password");
-        	return false;
-        }
-        else if(password1!=password2)
-        {
-        	alert("passwords dont match");
-        	return false;
-        }
-        else if(email.indexOf('@')==-1 || email.indexOf('.')==-1 || email.indexOf('@')==0 || (email.indexOf('.')-email.indexOf('@')<=1 || (email.length-email.indexOf('.')<2)))
-        {
-        	alert("not a valid email id");
-        	return false;
-        }  
-        else
-        {
-        	username = username.toLowerCase();
-            return true; 
-        } 	
-    }
-	// $('#signup-button').click(function(event) {
-
- //        if (formvalidation())
- //         {
-	// 			contactno=$('#contact').val();
+		if(username!='')
+		{
+			    if ((! /^[a-zA-Z0-9_]+$/.test(username)||username.length<4)&&(username!='')) 
+			    {
+			    	$(this).val("");
+		    	    $(this).css({"border": "2px solid red"});
+					$(this).attr('placeholder',"Not a valid username ..");
+                    signupflag=0;
+				}
+				signupflag=1;
 				
 
-	// 			$.ajax({
-	// 					url: "logincontrol.php",
-	// 					data : {username : username, 
-	// 					password1 : password1,
-	// 					email:email,
-	// 					contact:contact,
-	// 					functionname:"signup" },
-	// 					type: "POST",
-	// 					success:function(result){
-	// 					           if(result==1){
-	// 	                            alert("new data added");
-	// 					       		window.location = "level1.php";
-	// 					       	   }
-	// 					       	   else if(result =="This username already exist")
-	// 					       	   {
-	// 					       		alert(result);
-	// 					       	   }
+	    }
+    });
+    $("#username").focusin(function(e) {
+    	$(this).val(username);
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',usernameplaceholder);
+    });
 
-	// 					}
 
-	// 			});
-	// 	}
+	$("#email").focusout(function(e) {
 		
-	// });
+        email=$('#email').val();
+        if(email!='')
+        {
+				    if(email.indexOf('@')==-1 || email.indexOf('.')==-1 || email.indexOf('@')==0 || (email.indexOf('.')-email.indexOf('@')<=1 || (email.length-email.indexOf('.')<2)))
+				    {	
+					        $(this).val("");
+					        $(this).css({"border": "2px solid red"});
+							$(this).attr('placeholder',"Not a valid email id ..");
+                            signupflag=0;
+					}
+					else
+						signupflag=1;
+				
+		}
+    });
+    $("#email").focusin(function(e) {
+    	$(this).val(email);
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',emailplaceholder);
+    }); 
+
+
+
+    $("#contact").focusout(function(e) {
+    	contact=$('#contact').val();
+    	var conflag=0;
+    	contactvalidation=contact;
+    	if(contact!='')
+    	{
+		        if (contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')>0 && contactvalidation.toString().length!=14)
+		        {
+                        conflag=1;
+                        signupflag=0;
+                        
+		        }
+		        else if(contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().length!=13)
+		        {
+		        	     conflag=1;
+		        	     signupflag=0;
+		        	     
+		        }
+		        else if(contactvalidation.toString().indexOf('+')==-1 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().length!=10)
+		        {
+		        		 conflag=1;
+		        		 signupflag=0;
+		        		 
+		        }
+		        else if(contactvalidation.toString().indexOf('+')==-1 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().indexOf('0')==0 && contactvalidation.toString().length!=11)
+		        {
+		        		 conflag=1;
+		        		 signupflag=0;
+		        		 
+		        }
+		        else
+		        		signupflag=1; 
+
+
+
+        }
+        if(conflag==1)
+        {
+  			    $(this).val("");
+		    	$(this).css({"border": "2px solid red"});
+				$(this).attr('placeholder',"Not a valid contact no ..");      	
+        }
+    });
+    $("#contact").focusin(function(e) {
+    	$(this).val(contact);
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',contactplaceholder);
+    });
+
+   $("#re-password").focusout(function() {
+	password1 = $('#password').val();
+	password2=$('#re-password').val();
+        if(password2 !='')
+        {
+			    if (password1!=password2)
+			    {	
+			    	$(this).val("");
+		    	    $(this).css({"border": "2px solid red"});
+					$(this).attr('placeholder',"Password does not match ..");
+					signupflag=0;
+				}
+				else
+					signupflag=1;
+	    }
+
+    });
+    $("#re-password").focusin(function(e) {
+    	
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',passplaceholder);
+    });
+
+   
 
 	$('#signup-button').click(function(event){
 		event.preventDefault(event);
-		//username = $('#username').val();
-		//password1 = $('#password').val();
-		//email=$('#email').val();
-		//contact=$('#contact').val();
-		 if (formvalidation())
-		 {
-		 				$.ajax({
-						url: "../logincontrol.php",
-						data : {username : username, 
-						password1 : password1,
-						email:email,
-						contact:contact,
-						functionname:"signup" },
-						type: "POST",
-						success:function(result){
-						           console.log(result);
-						           if(result==1)
-						           {
-		                            	alert("new data added");
-						       			window.location = "levels/level1.php";
-						       	   }
-						       	   else if(result =="This username already exist")
-						       	   {
-						       			alert(result);
-						       	   }
+		username = $('#username').val();
+		password1 = $('#password').val();
+		email=$('#email').val();
+		contact=$('#contact').val();
+		password2=$('#re-password').val();
 
-						}
+		if(username=='')
+		{
+			$('#username').css({"border": "2px solid red"});
+			$('#username').attr('placeholder',"*required field");
+			signupflag=0;
+		}
+		if(email=='')
+		{
+			$('#email').css({"border": "2px solid red"});
+			$('#email').attr('placeholder',"*required field");
+			signupflag=0;
+		}
+		if(contact=='')
+		{
+			$('#contact').css({"border": "2px solid red"});
+			$('#contact').attr('placeholder',"*required field");
+			signupflag=0;
+		}
+		if(password1=='')
+		{
+			$('#password').css({"border": "2px solid red"});
+			$('#password').attr('placeholder',"*required field");
+			signupflag=0;
+		}
+		if(password2=='')
+		{
+			$('#re-password').css({"border": "2px solid red"});
+			$('#re-password').attr('placeholder',"*required field");
+			signupflag=0;
+		}
+		alert(signupflag);
+		if(signupflag==1)
+		{
+		 $.ajax({
+					url: "logincontrol.php",
+					data : {username : username, 
+					password1 : password1,
+					email:email,
+					contact:contact,
+					functionname:"signup" },
+					type: "POST",
+					success:function(result){
+					           console.log(result);
+					           if(result==1)
+					           {
+		                           	alert("new data added");
+					       			window.location = "levels/level1.php";
+					       	   }
+					       	   else if(result =="This username already exist")
+					       	   {
+					       			alert(result);
+					       	   }
+                     }
+		
+						
 		            
 				});
-		 }				
+		
+		}
+		
+		 			
 	});
+	// ********************************SIGN UP VALIDATION AND SIGNUP OVER ***************************************************************
 	$('.level-answerbutton').click(function(event) {
 
-		// var currentuser;
-		// $.ajax({
-		// 		url: "logincontrol.php",
-		// 		data : {functionname:"getusername"},
-		// 		type: "POST",
-		// 		success: function (result) {
-  //               currentuser=result;
-		// 		alert(currentuser);
-		// 		}
-		// });
-		    
 	    var answer=$('.level-answer').val();
         console.log(answer);
 		$.ajax({
