@@ -1,28 +1,7 @@
-<!-- <?php
-//$pagen = 1;
-//include "../levels.php";
-?> 
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
-    hello 
-    <?php
-        //echo $_SESSION['username'];
-        //echo "<br>"."level=1";
-    ?>
-    <button id='logout-button'>LogOut</button> 
-    <br>
-    <br>
-    <div>QUES:5%4=</div>
-    <input   id='level1-ans' class="level-answer"   placeholder="Enter Your Ans">
-    <button id='submit1-button' class ="level-answerbutton">SUBMIT</button>
-</body>
-</html>
 <?php
-    //include "../modal/winner.php";
-?> -->
+$pagen = 1;
+include "../levels.php";
+?> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -82,7 +61,7 @@
       <div class="sidePanel">
         <div id="currentUser">
             <p>USERNAME</p>
-            <h1>sgrpanchal31</h1>
+            <h1><?php echo $_SESSION['username'];?></h1>
         </div>
         <div class="leaderBoard">
             <h1>Leaderboard</h1>
@@ -115,6 +94,13 @@
                   <i class="fa fa-youtube-play" style="font-size:32px"></i>
                </div>
             </a>
+            <a href="#">
+               <div class="socialDiv">
+                  <div class="tooltip"><i class="fa fa-close" style="font-size:32px"></i>
+                    <span class="tooltiptext">LOGOUT!</span>
+                  </div>
+               </div>
+            </a>
          </div>
       </div>
    </div>
@@ -125,3 +111,6 @@
    <script src="../script/script.js"></script>
 </body>
 </html>
+<?php
+    include "../modal/winner.php";
+?>
