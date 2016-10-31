@@ -3,7 +3,7 @@ $(document).ready(function (argument) {
 	var credentials, password,username,password1,email,contact,functionname,password2,placeholder;
 	var signupflag=0;
 	usernameplaceholder= $('#username').attr("placeholder");
-	passwordplaceholder= $('#assword').attr("placeholder");
+	passwordplaceholder= $('#password').attr("placeholder");
 	repasswordplaceholder= $('#re-password').attr("placeholder");
 	emailplaceholder= $('#email').attr("placeholder");
 	contactplaceholder= $('#contact').attr("placeholder");
@@ -35,22 +35,21 @@ $(document).ready(function (argument) {
 
 
 // ********************************SIGN IN VALIDATION AND SIGNIN ***************************************************************
-	$("#user-credentials").focusout(function() {
-		credentials = $('#user-credentials').val();
-        if(credentials !='')
-        {
-			    if (! /^[a-zA-Z0-9_]+$/.test(credentials)||credentials.length<4)
-			    {	
-			    	$(this).val("");
-		    	    $(this).css({"border": "2px solid red"});
-					$(this).attr('placeholder',"Not a valid username ..");
+	// $("#user-credentials").focusout(function() {
+	// 	credentials = $('#user-credentials').val();
+ //     //    if(credentials !='')
+ //     //    {
+			    	
+	// 		  //   	$(this).val("");
+	// 	   //  	    $(this).css({"border": "2px solid red"});
+	// 				// $(this).attr('placeholder',"Not a valid username ..");
 					
-				}
+				
 			
 
-	    }
+	//     // }
 
-    });
+ //    });
     $("#user-credentials").focusin(function(e) {
     	$(this).val(credentials);
         $(this).css({"border": "2px solid white"});
@@ -144,14 +143,41 @@ $(document).ready(function (argument) {
 		username = $('#username').val();
 		if(username!='')
 		{
-			    if ((! /^[a-zA-Z0-9_]+$/.test(username)||username.length<4)&&(username!='')) 
+			    if (! /^[a-zA-Z0-9_]+$/.test(username)||username.length<4) 
 			    {
 			    	$(this).val("");
 		    	    $(this).css({"border": "2px solid red"});
 					$(this).attr('placeholder',"Not a valid username ..");
                     signupflag=0;
 				}
-				signupflag=1;
+				else
+				{	
+					$.ajax({
+							url:"logincontrol.php",
+							data:{user:username,
+								functionname:"checkuser"},
+							type:"POST",
+							success: function(result){
+								console.log(result);
+								alert(result);
+								if(result==true)
+								{
+									signupflag=1;
+								}
+								else if(result == "username already taken")
+								{	
+									$("#username").val("");
+									//username = "";
+									//alert(username);
+		    	   				 	$("#username").css({"border": "2px solid red"});
+									$("#username").attr('placeholder',result);
+                    				signupflag=0;
+								}
+
+							}
+					});
+					//signupflag=1;
+				}	
 				
 
 	    }
@@ -176,8 +202,33 @@ $(document).ready(function (argument) {
                             signupflag=0;
 					}
 					else
-						signupflag=1;
-				
+					{	
+						$.ajax({
+							url:"logincontrol.php",
+							data:{useremail:email,
+								functionname:"checkemail"},
+							type:"POST",
+							success: function(result){
+								console.log(result);
+								//alert(result);
+								if(result==true)
+								{
+									signupflag=1;
+								}
+								else if(result == "email already taken")
+								{	
+									$("#email").val("");
+									//username = "";
+									//alert(username);
+		    	   				 	$("#email").css({"border": "2px solid red"});
+									$("#email").attr('placeholder',result);
+                    				signupflag=0;
+								}
+
+							}
+						});
+					//signupflag=1;
+					}	
 		}
     });
     $("#email").focusin(function(e) {
@@ -192,6 +243,7 @@ $(document).ready(function (argument) {
     	contact=$('#contact').val();
     	var conflag=0;
     	contactvalidation=contact;
+    	
     	if(contact!='')
     	{
 		        if (contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')>0 && contactvalidation.toString().length!=14)
@@ -219,13 +271,43 @@ $(document).ready(function (argument) {
 		        		 
 		        }
 		        else
-		        		signupflag=1; 
+		        {	
+		        	    			
+						$.ajax({
+						url:"logincontrol.php",
+						async: false,
+						data:{usercontact:contact,
+						functionname:"checkcontact"},
+						type:"POST",
+						success: function(result){
+								console.log(result);
+								alert(result);
+								if(result==true)
+								{
+									signupflag=1;
+								}
+								else if(result == "contact already taken")
+								{	
+									$("#contact").val("");
+									//username = "";
+									//alert(username);
+		    	   				 	$("#contact").css({"border": "2px solid red"});
+									$("#contact").attr('placeholder',result);
+                    				signupflag=0;
+								}
+
+							}
+						});
+					//signupflag=1;
+					
+		        		// signupflag=1; 
+		        }
 
 
 
         }
         if(conflag==1)
-        {
+        {		alert("boy");
   			    $(this).val("");
 		    	$(this).css({"border": "2px solid red"});
 				$(this).attr('placeholder',"Not a valid contact no ..");      	
@@ -256,6 +338,11 @@ $(document).ready(function (argument) {
     });
     $("#re-password").focusin(function(e) {
     	
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',passplaceholder);
+    });
+     $("#username").focusin(function(e) {
+    	$(this).val(username);
         $(this).css({"border": "2px solid white"});
         $(this).attr('placeholder',passplaceholder);
     });

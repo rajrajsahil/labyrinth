@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(session_id() == '') {
+  session_start();
+  }
+//session_start();
 class User {
       private $db;
       function __construct ($DB_conn)
@@ -10,7 +13,7 @@ class User {
 	    public function login ($credentials, $password)
       {
 		    try{
-      			$stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:name AND password=:pass");
+      			$stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:name OR email=:name AND password=:pass");
       			$stmt->execute(array(":name"=>$credentials, ":pass"=>$password));
       			$user=$stmt->fetch(PDO::FETCH_ASSOC);
       			
@@ -18,14 +21,17 @@ class User {
           		{ 
                 if($user['status']>0)
                 {
-                  $_SESSION['username'] = $user['username'];
-                  $level = $user['level'];
-                  $_SESSION['level']=$level;
-                 return $level;
-                }
-                else
-                {
-                  return false;
+                  if($password==$user['password'])
+                  {
+                    $_SESSION['username'] = $user['username'];
+                    $level = $user['level'];
+                    $_SESSION['level']=$level;
+                    return $level;
+                  }
+                  else 
+                  {
+                    return false;
+                  }
                 }
           		} 
           	else{
@@ -44,24 +50,74 @@ class User {
     	  return false;
 	    }
 
-
-	    public function signup ($username,$password,$email,$contact)
+      public function checkuser($username)
       {
-        try{
-         	  $stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:username");
-         	  $stmt->execute(array(":username"=>$username));
-         	  $checkuser=$stmt->fetch(PDO::FETCH_ASSOC);
+         try{
+            $stmt = $this->db->prepare("SELECT * FROM user_details WHERE username=:username");
+            $stmt->execute(array(":username"=>$username));
+            $checkuser=$stmt->fetch(PDO::FETCH_ASSOC);
             if($stmt->rowCount()>0)
-         	  {
-         		  return "This username already exist";
-         	  }
+            {
+              return "username already taken";
+            }
+            else
+            {
+              return true;
+            }
          }
          catch(PDOException $e)
          {
-         	  return "Error: " . $e->getMessage();
+            return "Error: " . $e->getMessage();
          }
-         $level=1;
-        try{
+
+      }
+      public function checkemail($useremail)
+      {
+         try{
+            $stmt = $this->db->prepare("SELECT * FROM user_details WHERE email=:useremail");
+            $stmt->execute(array(":useremail"=>$useremail));
+            $checkuser=$stmt->fetch(PDO::FETCH_ASSOC);
+            if($stmt->rowCount()>0)
+            {
+              return "email already taken";
+            }
+            else
+            {
+              return true;
+            }
+         }
+         catch(PDOException $e)
+         {
+            return "Error: " . $e->getMessage();
+         }
+
+      }
+       public function checkcontact($usercontact)
+      {
+         try{
+            $stmt = $this->db->prepare("SELECT * FROM user_details WHERE contact=:usercontact");
+            $stmt->execute(array(":usercontact"=>$usercontact));
+            $checkuser=$stmt->fetch(PDO::FETCH_ASSOC);
+            if($stmt->rowCount()>0)
+            {
+              return "contact already taken";
+            }
+            else
+            {
+              return true;
+            }
+         }
+         catch(PDOException $e)
+         {
+            return "Error: " . $e->getMessage();
+         }
+
+      }
+	    public function signup ($username,$password,$email,$contact)
+      {
+        
+          $level=1;
+          try{
             $stmt = "INSERT INTO user_details (username, password, email,contact,level)VALUES ('$username', '$password', '$email','$contact','$level')";
     		    // use exec() because no results are returned
     	      $this->db->exec($stmt);

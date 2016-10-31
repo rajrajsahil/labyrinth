@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:80
--- Generation Time: Oct 27, 2016 at 02:31 PM
+-- Generation Time: Oct 31, 2016 at 12:20 PM
 -- Server version: 5.7.15-0ubuntu0.16.04.1
 -- PHP Version: 7.0.8-0ubuntu0.16.04.3
 
@@ -19,46 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `labyrinth`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `aa`
---
-
-CREATE TABLE `aa` (
-  `id` int( 10 ) NOT NULL,
-  `level1` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-) ;
-
---
--- Dumping data for table `aa`
---
-
-INSERT INTO `aa` (`id`, `level1`, `level2`) VALUES
-(1, '2016-10-01 18:30:00.000000', '2016-10-02 18:30:00.000000'),
-(1, '2016-10-01 18:30:00.000000', '2016-10-02 18:30:00.000000');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `checks`
---
-
-CREATE TABLE `checks` (
-  `id` int(6) NOT NULL,
-  `username` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
-  `email` varchar(30) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `checks`
---
-
-INSERT INTO `checks` (`id`, `username`, `password`, `email`) VALUES
-(1, 'sahi', 'kumar', 'raj@gmail'),
-(2, 'sahi', 'raj', 'raj@gmail');
 
 -- --------------------------------------------------------
 
@@ -100,27 +60,6 @@ INSERT INTO `level_answer` (`level`, `answer`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `q`
---
-
-CREATE TABLE `q` (
-  `level` int(10) NOT NULL,
-  `answer` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `q`
---
-
-INSERT INTO `q` (`level`, `answer`) VALUES
-(1, '1'),
-(2, '1'),
-(1, '1'),
-(2, '1');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `timing`
 --
 
@@ -156,14 +95,19 @@ CREATE TABLE `timing` (
 --
 
 INSERT INTO `timing` (`username`, `regtime`, `level`, `current`, `level1`, `level2`, `level3`, `level4`, `level5`, `level6`, `level7`, `level8`, `level9`, `level10`, `level11`, `level12`, `level13`, `level14`, `level15`, `level16`, `level17`, `level18`, `level19`, `level20`) VALUES
+('boga', 1477896239, 1, 1477896239, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('esha', 1477484440, 21, 1477557159, 1477494702, 1477554923, 1477555228, 1477555345, 1477555444, 1477555547, 1477555628, 1477555711, 1477555795, 1477555883, 1477556009, 1477556320, 1477556327, 1477556334, 1477556343, 1477556759, 1477556762, 1477556767, 1477556773, 1477557159),
-('harsh', 1477558701, 3, 1477558713, 1477558708, 1477558713, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('harsh', 1477558701, 6, 1477649417, 1477558708, 1477558713, 1477649386, 1477649406, 1477649417, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('qazwsx12', 1477743003, 1, 1477743003, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('qwerty', 1477707719, 1, 1477707719, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('qwertyu12345', 1477485758, 1, 1477485758, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('raj_sahil', 1477485915, 2, 1477557727, 1477557727, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('rohit', 1477558614, 1, 1477558614, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('ramm', 1477878935, 1, 1477878935, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('rohit', 1477558614, 2, 1477748933, 1477748933, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('sagar', 1477484530, 2, 1477484577, 1477484577, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('sahil', 1477484302, 3, 1477484973, 1477484965, 1477484973, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('sahilraj', 1477485613, 5, 1477557994, 1477486559, 1477557982, 1477557991, 1477557994, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('sahilraj', 1477485613, 8, 1477560987, 1477486559, 1477557982, 1477557991, 1477557994, 1477560296, 1477560843, 1477560987, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('saini', 1477895796, 1, 1477895796, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('shubhum', 1477484402, 1, 1477484402, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
@@ -187,25 +131,24 @@ CREATE TABLE `user_details` (
 --
 
 INSERT INTO `user_details` (`id`, `username`, `password`, `email`, `contact`, `level`, `status`) VALUES
+(47, 'boga', 'qwerty', 'rajsahil281@gmail.comcsd', 9996547412, 1, 1),
 (34, 'esha', 'esha', 'esha@gmail.com', 9874561239, 21, 1),
-(42, 'harsh', 'qwerty', 'ujjwalmadanraj@gmail.com', 9638527411, 3, 1),
+(42, 'harsh', 'qwerty', 'ujjwalmadanraj@gmail.com', 9638527411, 6, 1),
+(44, 'qazwsx12', 'qwerty', 'rajsahil281@gmail.com', 7410852963, 1, 1),
+(43, 'qwerty', 'qwerty', 'rajsahil281@gmail.com', 7418529633, 1, 1),
 (39, 'qwertyu12345', 'qwerty', 'rajsahil281@gmail.com', 9932508185, 1, 1),
 (40, 'raj_sahil', 'qwerty', 'rajsahil281@gmail.com', 9638527411, 2, 1),
-(41, 'rohit', 'qwerty', 'rajsahil281@gmail.com', 9963251445, 1, 1),
+(45, 'ramm', 'qwerty', 'rajsahil281@gmail.com', 7413219631, 1, 1),
+(41, 'rohit', 'qwerty', 'rajsahil281@gmail.com', 9963251445, 2, 1),
 (35, 'sagar', 'sagar', 'sagar@gmail.com', 3216457896, 2, 1),
 (32, 'sahil', 'sahil', 'rajsahil281@gmail.com', 9932508185, 3, 1),
-(38, 'sahilraj', 'qwerty', 'rajsahil281@gmail.com', 999987456, 5, 1),
+(38, 'sahilraj', 'qwerty', 'rajsahil281@gmail.com', 999987456, 8, 1),
+(46, 'saini', 'qwerty', 'rajsahil281@gmail.comasc', 9932508085, 1, 1),
 (33, 'shubhum', 'shubhum', 'shubhum@gmail.com', 9932508185, 1, 1);
 
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `checks`
---
-ALTER TABLE `checks`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `level_answer`
@@ -231,15 +174,10 @@ ALTER TABLE `user_details`
 --
 
 --
--- AUTO_INCREMENT for table `checks`
---
-ALTER TABLE `checks`
-  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
 -- AUTO_INCREMENT for table `user_details`
 --
 ALTER TABLE `user_details`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
