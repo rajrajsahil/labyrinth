@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(session_id() == '') {
+  session_start();
+  }
+//session_start();
 class User {
       private $db;
       function __construct ($DB_conn)
@@ -18,14 +21,17 @@ class User {
           		{ 
                 if($user['status']>0)
                 {
-                  $_SESSION['username'] = $user['username'];
-                  $level = $user['level'];
-                  $_SESSION['level']=$level;
-                 return $level;
-                }
-                else
-                {
-                  return false;
+                  if($password==$user['password'])
+                  {
+                    $_SESSION['username'] = $user['username'];
+                    $level = $user['level'];
+                    $_SESSION['level']=$level;
+                    return $level;
+                  }
+                  else 
+                  {
+                    return false;
+                  }
                 }
           		} 
           	else{

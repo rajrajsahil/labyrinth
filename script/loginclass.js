@@ -3,7 +3,7 @@ $(document).ready(function (argument) {
 	var credentials, password,username,password1,email,contact,functionname,password2,placeholder;
 	var signupflag=0;
 	usernameplaceholder= $('#username').attr("placeholder");
-	passwordplaceholder= $('#assword').attr("placeholder");
+	passwordplaceholder= $('#password').attr("placeholder");
 	repasswordplaceholder= $('#re-password').attr("placeholder");
 	emailplaceholder= $('#email').attr("placeholder");
 	contactplaceholder= $('#contact').attr("placeholder");
@@ -338,6 +338,11 @@ $(document).ready(function (argument) {
     });
     $("#re-password").focusin(function(e) {
     	
+        $(this).css({"border": "2px solid white"});
+        $(this).attr('placeholder',passplaceholder);
+    });
+     $("#username").focusin(function(e) {
+    	$(this).val(username);
         $(this).css({"border": "2px solid white"});
         $(this).attr('placeholder',passplaceholder);
     });
