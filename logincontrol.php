@@ -29,4 +29,19 @@ else if($functionname=="nextlevel")
 	echo $user->nextlevel($answer);
 	//echo "incorrect answer";
 }
+else if($functionname=="checkuser")
+{
+	$username = $_POST["user"];
+	echo $user->checkuser($username);
+}
+else if($functionname=="checkemail")
+{
+	$useremail=$_POST["useremail"];
+	echo $user->checkemail($useremail);
+}
+else if($functionname=="checkcontact")
+{
+	$usercontact=$_POST["usercontact"];
+	echo $user->checkcontact($usercontact);
+}
 ?>
