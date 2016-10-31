@@ -32,7 +32,7 @@ include "../levels.php";
          </div>
          <div id="answer">
              <div class="buttonCont">
-                <input id='level-ans' type='text' class="inputType level-answer" placeholder="  Answer.." >
+                <input id='level-answer' type='text' class="inputType level-answer" placeholder="  Answer.." >
             </div>
             <div class="buttonCont submitAns">
                 <input type="button" class="button level-answerbutton" id='submit-button' value="SUBMIT">

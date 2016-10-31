@@ -424,13 +424,16 @@ $(document).ready(function (argument) {
 
 	    var answer=$('.level-answer').val();
         console.log(answer);
-		$.ajax({
+        //alert("hello");
+        if(answer!='')
+        {
+			$.ajax({
 				url: "../logincontrol.php",
 				data : {functionname:"nextlevel",answer:answer},
 				type: "POST",
 				
 				success:function(result)
-				{
+				{		//alert(result);
                         if(result<=20){
 					       	alert("moved to level "+result);
 					        window.location="level"+result+".php";
@@ -445,13 +448,8 @@ $(document).ready(function (argument) {
 				        {
 				        	alert(result);
 				        }
-
-
 				}
-				       
-
-				
-
-		});
+			});
+		}
 	});
 });			
