@@ -344,7 +344,7 @@ $(document).ready(function (argument) {
      $("#username").focusin(function(e) {
     	$(this).val(username);
         $(this).css({"border": "2px solid white"});
-        $(this).attr('placeholder',passplaceholder);
+        $(this).attr('placeholder',usernameplaceholder);
     });
 
    
@@ -420,6 +420,25 @@ $(document).ready(function (argument) {
 		 			
 	});
 	// ********************************SIGN UP VALIDATION AND SIGNUP OVER ***************************************************************
+	//******************************color of inputfield turns to orignal after clicking on here button**********************************
+    $('.noAcBtn').click(function()
+    {
+    	$(".inputType").css({"border": "2px solid white"});
+    	$("#user-credentials").attr('placeholder',credentialplaceholder);
+        $('#user-password').attr("placeholder",passplaceholder);
+    	$('#username').attr("placeholder",usernameplaceholder);
+    	$('#email').attr("placeholder",emailplaceholder);
+    	$('#contact').attr("placeholder",contactplaceholder);
+	    $('#password').attr("placeholder",passwordplaceholder);
+	    $('#re-password').attr("placeholder",repasswordplaceholder);
+	
+	
+
+
+    });
+
+
+	//******************************over clicking on here button*****************************************************************************
 	$('.level-answerbutton').click(function(event) {
 
 	    var answer=$('.level-answer').val();

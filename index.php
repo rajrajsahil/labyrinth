@@ -19,10 +19,10 @@
    <title>Labyrinth 7.0 | Spring Fest 2017</title>
    <link rel="shortcut icon" href="images/favicon.png">
    <link rel="stylesheet" href="css/main.css">
-   <link rel="stylesheet" href="css/preloader.css">
+   <!--<link rel="stylesheet" href="css/preloader.css">-->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body onload="preloader()">
+<body >
    <div id="loader-wrapper">
       <div id="loader">
          <div class="content">      
@@ -92,7 +92,7 @@
 	        </div>
 	        <div class="loginPage">
 	        	  <div class="buttonCont">
-	            	<input id='user-credentials' type='text' class="inputType" placeholder="  Username.." >
+	            	<input id='user-credentials' type='text' class="inputType"  autofocus="autofocus"  placeholder="  Username.." >
 	            </div>
 	            <div class="buttonCont">
 	            	<input id='user-password' class="inputType" placeholder="  Passcode..">
@@ -107,7 +107,7 @@
 	        </div>
            <div class="signUpPage">
               <div class="buttonCont signUpCont">
-                  <input id='username' type='text' class="inputType" placeholder="  Username.." >
+                  <input id='username' type='text' class="inputType" autofocus="autofocus" placeholder="  Username.." >
                </div>
                <div class="buttonCont signUpCont">
                   <input type="email" id='email' class="inputType" placeholder="  E-Mail..">
@@ -156,16 +156,6 @@
          </div>
       </div>
    </div>
-   <!-- <input id='user-credentials' type = 'text' placeholder="Username or Email" >
-   <input id='user-password' placeholder="Password">	
-   <button id='login-button'>LogIn</button> 
-   <br>
-   <input  id='username' type = 'text' placeholder="Username" >
-	<input  id='email' type = 'text' placeholder="email" >
-	<input  id='contact' type = 'text' placeholder="contact" >			
-   <input   id='password' placeholder="Password">
-   <input   id='re-password' placeholder="Re-Password">
-   <button id='signup-button'>Signup</button> --> 
 
    <script src="script/jquery.js"></script>
    <script src="script/loginclass.js" ></script>
