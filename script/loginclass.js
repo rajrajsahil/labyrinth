@@ -341,10 +341,10 @@ $(document).ready(function (argument) {
         $(this).css({"border": "2px solid white"});
         $(this).attr('placeholder',passplaceholder);
     });
-     $("#username").focusin(function(e) {
-    	$(this).val(username);
+     $("#password").focusin(function(e) {
+    	$(this).val(password);
         $(this).css({"border": "2px solid white"});
-        $(this).attr('placeholder',usernameplaceholder);
+        $(this).attr('placeholder',passwordplaceholder);
     });
 
    
