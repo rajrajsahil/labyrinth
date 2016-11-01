@@ -424,6 +424,7 @@ $(document).ready(function (argument) {
     $('.noAcBtn').click(function()
     {
     	$(".inputType").css({"border": "2px solid white"});
+    	$(".inputType").val('');
     	$("#user-credentials").attr('placeholder',credentialplaceholder);
         $('#user-password').attr("placeholder",passplaceholder);
     	$('#username').attr("placeholder",usernameplaceholder);
