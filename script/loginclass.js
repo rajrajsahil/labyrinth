@@ -100,7 +100,7 @@ $(document).ready(function (argument) {
 						       	     }
 						       	    else{
 						       		
-						       		alert(result);
+						       		//alert(result);
 						       		if(result>20)
 						       		{
 						       			window.location = "levels/congratulations.php";
@@ -159,7 +159,7 @@ $(document).ready(function (argument) {
 							type:"POST",
 							success: function(result){
 								console.log(result);
-								alert(result);
+								//alert(result);
 								if(result==true)
 								{
 									signupflag=1;
@@ -281,7 +281,7 @@ $(document).ready(function (argument) {
 						type:"POST",
 						success: function(result){
 								console.log(result);
-								alert(result);
+								//alert(result);
 								if(result==true)
 								{
 									signupflag=1;
@@ -307,7 +307,7 @@ $(document).ready(function (argument) {
 
         }
         if(conflag==1)
-        {		alert("boy");
+        {		
   			    $(this).val("");
 		    	$(this).css({"border": "2px solid red"});
 				$(this).attr('placeholder',"Not a valid contact no ..");      	
@@ -402,7 +402,7 @@ $(document).ready(function (argument) {
 					           console.log(result);
 					           if(result==1)
 					           {
-		                           	alert("new data added");
+		                           	//alert("new data added");
 					       			window.location = "levels/level1.php";
 					       	   }
 					       	   else if(result =="This username already exist")
