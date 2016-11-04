@@ -26,7 +26,12 @@ class User {
                     $_SESSION['username'] = $user['username'];
                     $level = $user['level'];
                     $_SESSION['level']=$level;
-                    return $level;
+                    $stmt1 = $this->db->prepare("SELECT * FROM level_answer WHERE level=:level");
+                    $stmt1->execute(array(":level"=>$level));
+                    $levname=$stmt1->fetch(PDO::FETCH_ASSOC); 
+                    $levelname=$levname['levelname'];   
+                    $_SESSION['levelname']= $levelname;               
+                    return $levelname;
                   }
                   else 
                   {
@@ -127,6 +132,7 @@ class User {
    		      //echo "New record created successfully";
     	      $_SESSION["username"]=$username;
             $_SESSION["level"]=$level;
+            $_SESSION["levelname"]="level1";
     	      return true;
         }
         catch(PDOException $e)
@@ -148,20 +154,14 @@ class User {
       public function nextlevel($answer)
 	     {
 	   	    $username=$_SESSION['username'];
-          //$stmt1 = $this->db->prepare("SELECT * FROM user_details WHERE username=:username");
-         	//$stmt1->execute(array(":username"=>$username));
-         	//$userRow1=$stmt1->fetch(PDO::FETCH_ASSOC);
-
           $level=$_SESSION['level'];
           $levelname = "level".$level;
-         	//$nextlevel=$level+1;
 
-            
           $stmt2 = $this->db->prepare("SELECT * FROM level_answer WHERE level=:level");
          	$stmt2->execute(array(":level"=>$level));
          	$ans=$stmt2->fetch(PDO::FETCH_ASSOC); 
          	$correctanswer=$ans['answer'];
-          //return $correct_answer;
+         
 
          	if($answer==$correctanswer)
                 {
@@ -170,11 +170,23 @@ class User {
 
                     $stmt4 = $this->db->prepare("UPDATE timing SET `level`=level+1,current=:pass, $levelname=:pass WHERE username=:username");
                     $stmt4->execute(array(":username"=>$username, ":pass"=>time()));
-
-                    // $stmt5 = $this->db->prepare("UPDATE timing SET current=:pass, $pass=:pass WHERE username=:username");
-                    // $stmt5->execute(array(":username"=>$username, ":pass"=>time()));
+                    
+                    $level++;
                     $_SESSION['level']++;
-             		    return  $level+1;
+                    if($level<21)
+                    {
+                        $stmt5 = $this->db->prepare("SELECT * FROM level_answer WHERE level=:level");
+                        $stmt5->execute(array(":level"=>$level));
+                        $levname=$stmt5->fetch(PDO::FETCH_ASSOC); 
+                        $levelname=$levname['levelname'];  
+                        $_SESSION['levelname']=$levelname;                  
+                        return $levelname;
+             		     }
+                     else
+                        {
+                          $_SESSION['levelname']="congratulations";   
+                          return "congratulations";
+                        }
          
          	      }
          	else

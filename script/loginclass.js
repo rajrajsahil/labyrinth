@@ -35,23 +35,9 @@ $(document).ready(function (argument) {
 
 
 // ********************************SIGN IN VALIDATION AND SIGNIN ***************************************************************
-	// $("#user-credentials").focusout(function() {
-	// 	credentials = $('#user-credentials').val();
- //     //    if(credentials !='')
- //     //    {
-			    	
-	// 		  //   	$(this).val("");
-	// 	   //  	    $(this).css({"border": "2px solid red"});
-	// 				// $(this).attr('placeholder',"Not a valid username ..");
-					
-				
-			
 
-	//     // }
-
- //    });
     $("#user-credentials").focusin(function(e) {
-    	$(this).val(credentials);
+    	
         $(this).css({"border": "2px solid white"});
         $(this).attr('placeholder',credentialplaceholder);
     });
@@ -107,8 +93,8 @@ $(document).ready(function (argument) {
 						       		}
 						       		else
 						       		{
-						       			alert("level"+result+".php");
-						       			window.location.href = "levels/level"+result+".php";
+						       			alert("you are in " +result);
+						       			window.location.href = "levels/"+result+".php";
 						       			//$(location).attr("href", "level"+result+".php");
 						       		}
 						       		//alert(glevel);
@@ -246,29 +232,14 @@ $(document).ready(function (argument) {
     	
     	if(contact!='')
     	{
-		        if (contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')>0 && contactvalidation.toString().length!=14)
+		        if (contactvalidation.toString().length!=10)
 		        {
-                        conflag=1;
+                        
+		  			    $(this).val("");
+				    	$(this).css({"border": "2px solid red"});
+						$(this).attr('placeholder',"Not a valid contact no ..");                       
                         signupflag=0;
                         
-		        }
-		        else if(contactvalidation.toString().indexOf('+')==0 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().length!=13)
-		        {
-		        	     conflag=1;
-		        	     signupflag=0;
-		        	     
-		        }
-		        else if(contactvalidation.toString().indexOf('+')==-1 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().length!=10)
-		        {
-		        		 conflag=1;
-		        		 signupflag=0;
-		        		 
-		        }
-		        else if(contactvalidation.toString().indexOf('+')==-1 && contactvalidation.toString().indexOf('-')==-1 && contactvalidation.toString().indexOf('0')==0 && contactvalidation.toString().length!=11)
-		        {
-		        		 conflag=1;
-		        		 signupflag=0;
-		        		 
 		        }
 		        else
 		        {	
@@ -306,12 +277,7 @@ $(document).ready(function (argument) {
 
 
         }
-        if(conflag==1)
-        {		
-  			    $(this).val("");
-		    	$(this).css({"border": "2px solid red"});
-				$(this).attr('placeholder',"Not a valid contact no ..");      	
-        }
+   
     });
     $("#contact").focusin(function(e) {
     	$(this).val(contact);
@@ -453,22 +419,26 @@ $(document).ready(function (argument) {
 				type: "POST",
 				
 				success:function(result)
-				{		//alert(result);
-                        if(result<=20){
-					       	alert("moved to level "+result);
-					        window.location="level"+result+".php";
-				        }  
-				        else if(result>20)
-				        {
-				        	alert("congratulation");
-				        	window.location="congratulations.php";
+				{	
+					if(result=="incorrect answer")
+					{
+						alert(result);
 
-				        } 
-				        else if(result=="incorrect answer")
-				        {
-				        	alert(result);
-				        }
+					}
+					else
+					{
+						alert("moved to " + result);
+						window.location = result+".php";
+						
+					}
+
+					
+                          
+                        
+
+
 				}
+					
 			});
 		}
 	});

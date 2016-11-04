@@ -3,7 +3,7 @@ session_start();
 if(isset($_SESSION['username']))
 {	if($pagen!=$_SESSION['level'])
 	{
-		header('Location:'.'level'.$_SESSION['level'].'.php');
+		header('Location:'.$_SESSION['levelname'].'.php');
 	}
 }
 else

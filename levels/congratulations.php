@@ -8,7 +8,7 @@ else
 {
 	if($_SESSION['level']<21)
 	{
-		header('Location:'.'level'.$_SESSION['level'].'.php');
+		header('Location:'.$_SESSION['levelname'].'.php');
 	}
 }
 ?>

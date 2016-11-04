@@ -19,10 +19,10 @@
    <title>Labyrinth 7.0 | Spring Fest 2017</title>
    <link rel="shortcut icon" href="images/favicon.png">
    <link rel="stylesheet" href="css/main.css">
-   <!--<link rel="stylesheet" href="css/preloader.css">-->
+   <link rel="stylesheet" href="css/preloader.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body >
+<body onclick="preloader()">
    <div id="loader-wrapper">
       <div id="loader">
          <div class="content">      
@@ -95,7 +95,7 @@
 	            	<input id='user-credentials' type='text' class="inputType"  autofocus="autofocus"  placeholder="  Username.." >
 	            </div>
 	            <div class="buttonCont">
-	            	<input id='user-password' class="inputType" placeholder="  Passcode..">
+	            	<input id='user-password' type="password" class="inputType" placeholder="  Passcode..">
 	            </div>
 	            <div class="buttonCont">
 	            	<input type="button" class="button" id='login-button' value="ENTER">
