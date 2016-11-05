@@ -408,7 +408,8 @@ $(document).ready(function (argument) {
 	//******************************over clicking on here button*****************************************************************************
 	$('.level-answerbutton').click(function(event) {
 
-	    var answer=$('.level-answer').val();
+	    var answerspace=$('.level-answer').val();
+	    var answer=answerspace.replace(/\s/g,'')
         console.log(answer);
         //alert("hello");
         if(answer!='')
@@ -423,6 +424,7 @@ $(document).ready(function (argument) {
 					if(result=="incorrect answer")
 					{
 						alert(result);
+						$('.level-answer').val("");
 
 					}
 					else
