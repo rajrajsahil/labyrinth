@@ -27,7 +27,9 @@ else if($functionname=="getusername")
   }
 else if($functionname=="nextlevel")
   {
+	
 	$answer = $_POST['answer'];
+	$answer = preg_replace('/\s+/', '', $answer);
 	echo $user->nextlevel($answer);
 	//echo "incorrect answer";
 }
