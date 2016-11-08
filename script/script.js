@@ -5,7 +5,7 @@ function preloader(){
 }
 
 $(document).ready(function(){
-
+	
 	setInterval( function() {
 		var r = Math.floor(Math.random()*255);
 		var g = Math.floor(Math.random()*255);

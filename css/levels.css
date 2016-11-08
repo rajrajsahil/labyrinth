@@ -1,3 +1,6 @@
+body{
+	overflow:none;
+}
 /*=================MAIN PANEL=====================*/
 #intro{
 	background-color: rgba(0,0,0,0.7);
@@ -58,7 +61,7 @@
 }
 .level-answerbutton{
 	height: 40px;
-	width: 100%;
+
 }
 /*=================SIDE PANEL=====================*/
 .sidePanel{
@@ -85,10 +88,9 @@
 	font-weight: 100;
 	margin-bottom: 0;
 }
-.leaderBoard ol{
-	margin:0;
-	padding:20px;
-	padding-top: 0;
+.rankNo{
+	font-weight: 100;
+
 }
 .social{
 	position: absolute;
@@ -102,9 +104,7 @@
 	width:calc(100% / 4);
 	float: left;
 }
-.socialDiv{
 
-}
 /*-------------Tooltip-------------*/
 .tooltip {
     position: relative;

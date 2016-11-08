@@ -1,6 +1,12 @@
       <div class="bottom">
-         <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="../images/iit.png"></a>
-         <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="../images/favicon.png"></a>
+         <div id="iitkgpsf">
+            <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="../images/iit.png"></a>
+            <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="../images/favicon.png"></a>
+         </div>
+         <div id="sponsors">
+            <a href="#" target="_blank"><img class="iitLogo" src="../images/kaspersky.png"></a>
+            <a href="#" target="_blank"><img class="iitLogo" src="../images/znetlivelogo.png"></a>
+         </div>
       </div>
       <div class="sidePanel">
         <div id="currentUser">
@@ -9,13 +15,11 @@
         </div>
         <div class="leaderBoard">
             <h1>Leaderboard</h1>
-            <ol>
+            <div>
                <?php
                include "../modal/winner.php";
               ?> 
-              
-               
-            </ol>
+            </div>
         </div>
         <div class="social">
             <a href="#">

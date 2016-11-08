@@ -22,7 +22,7 @@
    <link rel="stylesheet" href="css/preloader.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body onclick="preloader()">
+<body onload="preloader()">
    <div id="loader-wrapper">
       <div id="loader">
          <div class="content">      
@@ -133,8 +133,14 @@
       </div>
 
       <div class="bottom">
-         <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="images/iit.png"></a>
-         <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="images/favicon.png"></a>
+         <div id="iitkgpsf">
+            <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="images/iit.png"></a>
+            <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="images/favicon.png"></a>
+         </div>
+         <div id="sponsors">
+            <a href="#" target="_blank"><img class="iitLogo" src="images/kaspersky.png"></a>
+            <a href="#" target="_blank"><img class="iitLogo" src="images/znetlivelogo.png"></a>
+         </div>
       </div>
       <div class="sidePanel">
       	<div class="social">
