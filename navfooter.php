@@ -1,11 +1,11 @@
       <div class="bottom" style="right: 10px;">
          <div id="iitkgpsf">
-            <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="../images/iit.png"></a>
-            <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="../images/favicon.png"></a>
+            <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="images/iit.png"></a>
+            <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="images/favicon.png"></a>
          </div>
          <div id="sponsors">
-            <a href="#" target="_blank"><img class="iitLogo" src="../images/kaspersky.png"></a>
-            <a href="#" target="_blank"><img class="iitLogo" src="../images/znetlivelogo.png"></a>
+            <a href="#" target="_blank"><img class="iitLogo" src="images/kaspersky.png"></a>
+            <a href="#" target="_blank"><img class="iitLogo" src="images/znetlivelogo.png"></a>
          </div>
       </div>
 
@@ -49,10 +49,10 @@
          </div>
         </div> -->
 
-   <script src="../script/jquery.js"></script>
-   <script src="../script/loginclass.js" ></script>
-   <script src="../script/mouse.parallax.js"></script>
-   <script src="../script/script.js"></script>
+   <script src="script/jquery.js"></script>
+   <script src="script/loginclass.js" ></script>
+   <script src="script/mouse.parallax.js"></script>
+   <script src="script/script.js"></script>
    
 </body>
 </body>

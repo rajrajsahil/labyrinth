@@ -69,7 +69,7 @@
          </div>   
       </nav>
 
-      <div class="sideLogo">
+      <div class="sideLogo" style="border:2px solid red;">
          <h1 class="labyrinth"><a href="#">Labyrinth 7.0</a></h1>
       </div>
       <div id="intro">

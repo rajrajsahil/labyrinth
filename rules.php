@@ -1,6 +1,9 @@
 <?php
 include "navheader.php";
 ?>
+<div class="sideLogo">
+         <h1 class="labyrinth"><a href="#">&nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rules &nbsp; &nbsp; &nbsp; &nbsp;</a></h1>
+      </div>
  <div id="intro" style="width:calc(100% - 40px - 5px - 50px);">
  		 <h3 style="font-family:champagne;font-size:28px; text-align: center; ">Rules</h3>
                   <ol>
