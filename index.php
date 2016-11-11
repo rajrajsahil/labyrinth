@@ -59,10 +59,10 @@
          <div class="container">
             <div class="nav-wrapper">
                <ul>
-                  <li><a href="sass.html">Home</a></li>
-                  <li><a href="badges.html">About</a></li>
-                  <li><a href="sass.html">Rules</a></li>
-                  <li><a href="sass.html">Credits</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="rules.php">Rules</a></li>
+                  <li><a href="credits.php">Credits</a></li>
                   <li><a href="collapsible.html">Forum</a></li>
                </ul>
             </div>

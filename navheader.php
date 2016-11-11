@@ -16,11 +16,11 @@
          <div class="container">
             <div class="nav-wrapper">
                <ul>
-                  <li><a href="../index.php">Home</a></li>
-                  <li><a href="../about.php">About</a></li>
-                  <li><a href="../rules.php">Rules</a></li>
-                  <li><a href="../credits.php">Credits</a></li>
-                  <li><a href="../collapsible.html">Forum</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="rules.php">Rules</a></li>
+                  <li><a href="credits.php">Credits</a></li>
+                  <li><a href="collapsible.html">Forum</a></li>
                </ul>
             </div>
          </div>   
