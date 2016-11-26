@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
 <body>
-   <div id="background" class="mouse-bg" style="background-image: url('../images/bg.png');"></div>
+   <div id="background" class="mouse-bg" style="background-image: url('images/bg.png');"></div>
    <div class="foreground"></div>
    <div id="inner">
          <nav>
@@ -24,8 +24,5 @@
                </ul>
             </div>
          </div>   
-      </nav>
-
-      <!-- <div class="sideLogo">
-         <h1 class="labyrinth"><a href="#">&nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; <?php echo $pagename;?> &nbsp; &nbsp; &nbsp; &nbsp;</a></h1>
-      </div>     -->
+         </nav>
+   
