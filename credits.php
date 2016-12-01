@@ -3,7 +3,7 @@ $pagename = "credits";
 include "navheader.php";
 ?>
 	<div class="sideLogo ">
-        <h1 class="credits"><a href="#">CREDITS</a></h1>
+        <h1 class="labyrinth"><a href="#">Labyrinth 7.0</a></h1>
     </div>    
 	<div id="intro" style="width:calc(100% - 40px - 5px - 50px);">
 		<div>

@@ -19,10 +19,10 @@
    <title>Labyrinth 7.0 | Spring Fest 2017</title>
    <link rel="shortcut icon" href="images/favicon.png">
    <link rel="stylesheet" href="css/main.css">
-   <!-- <link rel="stylesheet" href="css/preloader.css"> -->
+   <link rel="stylesheet" href="css/preloader.css"> 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 </head>
-<body >
+<body onload="preloader()">
    <div id="loader-wrapper">
       <div id="loader">
          <div class="content">      
