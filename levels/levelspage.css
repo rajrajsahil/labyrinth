@@ -35,6 +35,6 @@
 	-webkit-border-radius: 100px;
 	-moz-border-radius: 100px;
 }
-#my-img:hover {
+#img:hover {
     content: url('../images/srk2.jpg');
 }
