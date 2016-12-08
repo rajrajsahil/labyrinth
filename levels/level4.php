@@ -11,7 +11,7 @@
              <p>Description</p>
          </div>
          <div id="levelRight">
-             <img src="../images/gravity-detached.jpg">
+             <img src="../images/sept.jpg">
          </div>
          <div id="answer">
              <div class="buttonCont">

@@ -3,6 +3,7 @@
      include "../levels.php";
      include "header.php";
   ?>
+  <link rel="stylesheet" href="levelspage.css">
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
@@ -11,7 +12,7 @@
              <p>Description</p>
          </div>
          <div id="levelRight">
-             <img src="../images/gravity-detached.jpg">
+             <img id="img" src="../images/srk.jpg">
          </div>
          <div id="answer">
              <div class="buttonCont">
@@ -23,6 +24,7 @@
          </div>
 
       </div>
+
 <?php
      include "footer.php";
 ?>
