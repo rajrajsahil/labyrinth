@@ -8,10 +8,13 @@
              <div id="levelHead">
                  <h1>Level 10</h1>
              </div>
-             <p>Description</p>
+             <p id="description">Description</p>
+             <div>
+                  <img id="todrag" src="../images/akshay.jpg" draggable="true" ondragstart="drag(event)">
+             </div>
          </div>
          <div id="levelRight">
-             <img src="../images/gravity-detached.jpg">
+             <img id="ondrag" src="../images/download.jpg" ondrop="drop(event)" ondragover="allowDrop(event)">
          </div>
          <div id="answer">
              <div class="buttonCont">
@@ -26,3 +29,26 @@
 <?php
      include "footer.php";
 ?>
+<script type="text/javascript">
+    function allowDrop(ev)
+    {
+        ev.preventDefault();
+        //alert("hai");
+    }
+    function drag(ev)
+    {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    function drop(ev)
+    {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+        if(data=="todrag")
+        {
+            $("#ondrag").attr("src","../images/sangarsh.jpg");
+            $("#description").html("What's my name");
+        }
+    }
+
+</script>

@@ -13,7 +13,7 @@
     </div>
     <div id="levelRight">
     <div id = "cloud"><b>Feeling Weak</b></div>
-        <img onclick="showCoords(event)" src="../images/jadoo.jpg">
+        <img onclick="showCoords(event)" src="../images/Jadoo.jpg">
 
     </div>
     <div id="answer">

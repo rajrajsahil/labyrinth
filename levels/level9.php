@@ -4,6 +4,7 @@
      include "header.php";
   ?>
       <div id="intro">
+      
          <div id="levelLeft">
              <div id="levelHead">
                  <h1>Level 9</h1>
@@ -11,7 +12,7 @@
              <p>Description</p>
          </div>
          <div id="levelRight">
-             <img src="../images/gravity-detached.jpg">
+             <img id="images" src="../images/maxresdefault.jpg">
          </div>
          <div id="answer">
              <div class="buttonCont">
@@ -23,6 +24,30 @@
          </div>
 
       </div>
+
 <?php
      include "footer.php";
 ?>
+<script type="text/javascript">
+        var clickcount =0;
+        $("#images").click(function(){
+            
+            clickcount++;
+            console.log(clickcount);
+            if(clickcount%3==1)
+            {   
+                //alert("clicked");
+                $(this).attr("src","../images/dus8P.jpg");
+            }
+            else if(clickcount%3==2)
+            {   
+                //alert("clicked");
+                $(this).attr("src","../images/464990-26-11-attack.jpg");
+            }
+            else
+            {
+                 $(this).attr("src","../images/maxresdefault.jpg");
+            }
+        });
+</script>
+
