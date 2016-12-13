@@ -174,10 +174,10 @@
                                 <div class="door active-left" id="leftDoor"></div>
                                 <div class="door active-right" id="rightDoor"</div>            
                               </div>           
-                          </div>      
-                        </div>
-                    </div>     
-                </div>
+                        </div>      
+                    </div>
+                </div>     
+        </div>
                 <audio id="audio" >
                     <source src="../images/elevatorbeep.mp3" type="audio/mpeg">
                 </audio>

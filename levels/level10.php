@@ -14,7 +14,7 @@
              </div>
          </div>
          <div id="levelRight">
-             <img id="ondrag" src="../images/download.jpg" ondrop="drop(event)" ondragover="allowDrop(event)">
+             <img id="ondrag" src="../images/house.jpg" ondrop="drop(event)" ondragover="allowDrop(event)">
          </div>
          <div id="answer">
              <div class="buttonCont">
@@ -33,7 +33,7 @@
     function allowDrop(ev)
     {
         ev.preventDefault();
-        //alert("hai");
+       
     }
     function drag(ev)
     {

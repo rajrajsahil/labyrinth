@@ -1,18 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="image/png" href="../images/director.png"/>
+  </head>
+</head>
+<body>
+
+</body>
+</html>
 <?php
      $pagen = 15;
      include "../levels.php";
      include "header.php";
   ?>
+  
+  <style type="text/css">
+  	#upper {
+			height:50%;
+  	}
+  	#down {
+  		height:50%;
+  	}
+  	a {
+  		text-decoration: none;
+  		color: #ffffff;
+  		cursor: default;
+  	}
+
+  </style>
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
                  <h1>Level 15</h1>
              </div>
-             <p>Description</p>
+             <p>hint is <a href="../images/invisible.txt" download="hint">here</a></p>
          </div>
          <div id="levelRight">
-             <img src="../images/gravity-detached.jpg">
+         	<div id="upper">
+            	<img src="../images/orphan.jpg">
+            </div>
+
+            <!-- 
+
+
+
+
+				aftab shivdasani and ahmad khan is orphan 
+
+
+
+			-->
+            <div id="down">
+            	<img src="../images/calender.jpg">
+            </div>
          </div>
+
          <div id="answer">
              <div class="buttonCont">
                 <input id='level-answer' type='text' class="inputType level-answer" placeholder="  Answer.." >

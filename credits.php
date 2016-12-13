@@ -50,20 +50,20 @@ include "navheader.php";
                 	</div>
                 </div>
                 <div class="memberBox">
-                	<img class="creditImg" src="images/sahil.jpg" />
+                	<img class="creditImg" src="images/sahil.png" />
                 	<h2>Sahil Raj</h2>
                 	<div class="memberSocial">
-                		<a href="#"  target="_blank">
+                		<a href="https://www.facebook.com/raj.sahil.735"  target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-facebook-f" style="font-size:32px"></i>
 		                    </div>
 		                </a>
-		                <a href="#"  target="_blank">
+		                <a href="https://twitter.com/Its_SahilRaj"  target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-twitter" style="font-size:32px"></i>
 		                    </div>
 		                </a>
-		                <a href="#"  target="_blank">
+		                <a href="https://www.linkedin.com/in/sahil-raj-ba5261128"  target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-linkedin" style="font-size:32px"></i>
 		                    </div>
