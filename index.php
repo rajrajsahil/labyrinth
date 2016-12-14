@@ -1,16 +1,16 @@
 <?php
 
- session_start();
- if (isset($_SESSION['username']))
- {
-    
-   if($_SESSION["level"]>20){
-     header ("Location: levels/congratulations.php");
+   session_start();
+   if (isset($_SESSION['username']))
+   {
+       
+      if($_SESSION["level"]>20){
+         header ("Location: levels/congratulations.php");
+      }
+      else {
+         header ("Location:"."levels/level".$_SESSION["level"].".php");
+      }
    }
-   else {
-       header ("Location:"."levels/level".$_SESSION["level"].".php");
-   }
- }
 ?>
 <!DOCTYPE html>
 <html>

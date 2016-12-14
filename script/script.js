@@ -1,7 +1,7 @@
 function preloader(){
-	setTimeout(function(){
+	// setTimeout(function(){
         $('body').addClass('loaded');
-    }, 6000);
+    // }, 6000);
 }
 
 $(document).ready(function(){

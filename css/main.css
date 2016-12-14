@@ -111,8 +111,7 @@ ul>li>a:hover{
 	left:-135px;
 	text-transform: uppercase;
 	font-family: 'Lato', sans-serif;
-	/*line-height: 1.1;
-	font-weight: 900;*/
+
 }
 
 .sideLogo h1 a{
@@ -130,10 +129,14 @@ ul>li>a:hover{
 	bottom:84px;
 	width: calc(100% - 40px - 64px - 64px);
 }
+
 .introSect{
 	height: 100%;
 	width:49.5%;
 	background-color: rgba(0,0,0,0.7);
+}
+.introSect::selection{
+	background: transparent;
 }
 .hi{
 	padding:40px;
@@ -436,7 +439,7 @@ input:focus:-ms-input-placeholder {
 .memberSocial a{
 	width:33%;
 	float: left;
-	margin-bottom: 200px;
+	margin-bottom: 100%;
 }
 
 /*======================================================*/
