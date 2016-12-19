@@ -10,17 +10,17 @@ include "navheader.php";
                 	<img class="creditImg imageEsha" src="images/esha.jpg" />
                 	<h2>Esha Lath</h2>
                 	<div class="memberSocial">
-                		<a href="#" target="_blank">
+                		<a href="https://en-gb.facebook.com/people/Esha-Lath/100009367704297" target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-facebook-f" style="font-size:32px"></i>
 		                    </div>
 		                </a>
-		                <a href="#" target="_blank">
+		                <a href="https://twitter.com/elath03" target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-twitter" style="font-size:32px"></i>
 		                    </div>
 		                </a>
-		                <a href="#" target="_blank">
+		                <a href="https://www.linkedin.com/in/esha-lath-606237104" target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-linkedin" style="font-size:32px"></i>
 		                    </div>

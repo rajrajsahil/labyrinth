@@ -3,15 +3,20 @@
      include "../levels.php";
      include "header.php";
   ?>
+
+
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
                  <h1>Level 5</h1>
              </div>
              <p>Description</p>
+             <audio id="song" src="../images/holi.mp3" controls></audio>
          </div>
+           
+        
          <div id="levelRight">
-             <img src="../images/basanti.jpg">
+             <img src="../images/sholay.jpg">
          </div>
          <div id="answer">
              <div class="buttonCont">
