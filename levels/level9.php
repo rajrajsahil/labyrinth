@@ -28,6 +28,9 @@
 <?php
      include "footer.php";
 ?>
+<!-- 
+BIRTHDAY
+ -->
 <script type="text/javascript">
         var clickcount =0;
         $("#images").click(function(){
