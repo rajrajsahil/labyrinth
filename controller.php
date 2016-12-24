@@ -1,6 +1,8 @@
 <?php 
 include 'connect.php';
+session_start();
 $functionname = $_POST['functionname'];
+
 if($functionname=="login")
   {
 	$credentials = $_POST['credentials'];
@@ -30,22 +32,23 @@ else if($functionname=="nextlevel")
 	
 	$answer = $_POST['answer'];
 	$answer = preg_replace('/\s+/', '', $answer);
+	$answer = strtolower($answer);
 	echo $user->nextlevel($answer);
 	//echo "incorrect answer";
-}
+  }
 else if($functionname=="checkuser")
-{
+  {
 	$username = $_POST["user"];
 	echo $user->checkuser($username);
-}
+  }
 else if($functionname=="checkemail")
-{
+  {
 	$useremail=$_POST["useremail"];
 	echo $user->checkemail($useremail);
-}
+  }
 else if($functionname=="checkcontact")
-{
+  {
 	$usercontact=$_POST["usercontact"];
 	echo $user->checkcontact($usercontact);
-}
+  }
 ?>

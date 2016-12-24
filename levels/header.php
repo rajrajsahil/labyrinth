@@ -7,6 +7,7 @@
    <link rel="stylesheet" href="../css/main.css">
    <link rel="stylesheet" href="../css/levels.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+   <script src="../script/jquery.js" ></script>
 </head>
 <body>
    <div id="background" class="mouse-bg" style="background-image: url('../images/bg.png');"></div>

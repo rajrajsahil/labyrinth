@@ -70,7 +70,7 @@ $(document).ready(function (argument) {
         }
         else{
 				$.ajax({
-						url: "logincontrol.php",
+						url: "controller.php",
 						data : {credentials : credentials, 
 							password : password ,
 							functionname:"login"},
@@ -109,7 +109,7 @@ $(document).ready(function (argument) {
 	$('#logout-button').click(function(event) {		       
          
 		$.ajax({
-				url: "../logincontrol.php",
+				url: "../controller.php",
 				data : {functionname:"logout"},
 				type: "POST",
 				success: function (result) {
@@ -139,7 +139,7 @@ $(document).ready(function (argument) {
 				else
 				{	
 					$.ajax({
-							url:"logincontrol.php",
+							url:"controller.php",
 							data:{user:username,
 								functionname:"checkuser"},
 							type:"POST",
@@ -192,7 +192,7 @@ $(document).ready(function (argument) {
 					else
 					{	
 						$.ajax({
-							url:"logincontrol.php",
+							url:"controller.php",
 							data:{useremail:email,
 								functionname:"checkemail"},
 							type:"POST",
@@ -247,7 +247,7 @@ $(document).ready(function (argument) {
 		        {	
 		        	    			
 						$.ajax({
-						url:"logincontrol.php",
+						url:"controller.php",
 						async: false,
 						data:{usercontact:contact,
 						functionname:"checkcontact"},
@@ -359,7 +359,7 @@ $(document).ready(function (argument) {
 		if(signupflag==1)
 		{
 		 $.ajax({
-					url: "logincontrol.php",
+					url: "controller.php",
 					data : {username : username, 
 					password1 : password1,
 					email:email,
@@ -371,11 +371,7 @@ $(document).ready(function (argument) {
 					           if(result==1)
 					           {
 		                           	//alert("new data added");
-					       			window.location = "levels/level1.php";
-					       	   }
-					       	   else if(result =="This username already exist")
-					       	   {
-					       			alert(result);
+					       			window.location = "levels/power.php";
 					       	   }
                      }
 		
@@ -412,12 +408,13 @@ $(document).ready(function (argument) {
 
 	    var answerspace=$('.level-answer').val();
 	    var answer=answerspace.replace(/\s/g,'')
+	    answer=answer.toLowerCase();
         console.log(answer);
         //alert("hello");
         if(answer!='')
         {
 			$.ajax({
-				url: "../logincontrol.php",
+				url: "../controller.php",
 				data : {functionname:"nextlevel",answer:answer},
 				type: "POST",
 				

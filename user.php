@@ -1,15 +1,10 @@
 <?php
-if(session_id() == '') {
-  session_start();
-  }
-//session_start();
 class User {
       private $db;
       function __construct ($DB_conn)
       {
 		    $this->db = $DB_conn;
 		  }
-      //public function redirect($username);
 	    public function login ($credentials, $password)
       {
 		    try{
@@ -132,18 +127,15 @@ class User {
    		      //echo "New record created successfully";
     	      $_SESSION["username"]=$username;
             $_SESSION["level"]=$level;
-            $_SESSION["levelname"]="level1";
-    	      return true;
+            $_SESSION["levelname"]="power";
+    	      return $level;
         }
         catch(PDOException $e)
         {
        	  echo "Error: " . $e->getMessage();
  		    }
       }
-     //  public function getusername()
-	    // {
-     //     return $_SESSION['username'];
-     //  }
+
       public function winner()
       {
         $stmt = $this->db->prepare("SELECT username FROM timing ORDER BY level DESC,current ASC LIMIT 10");
@@ -161,8 +153,7 @@ class User {
          	$stmt2->execute(array(":level"=>$level));
          	$ans=$stmt2->fetch(PDO::FETCH_ASSOC); 
          	$correctanswer=$ans['answer'];
-         
-
+          $correctanswer=strtolower($correctanswer);
          	if($answer==$correctanswer)
                 {
                     $stmt3 = $this->db->prepare("UPDATE user_details SET level=level+1 WHERE username=:username");

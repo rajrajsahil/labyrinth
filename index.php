@@ -1,5 +1,4 @@
 <?php
-
    session_start();
    if (isset($_SESSION['username']))
    {
@@ -8,7 +7,7 @@
          header ("Location: levels/congratulations.php");
       }
       else {
-         header ("Location:"."levels/level".$_SESSION["level"].".php");
+         header ("Location:"."levels/".$_SESSION['levelname'].".php");
       }
    }
 ?>
@@ -164,7 +163,7 @@
    </div>
 
    <script src="script/jquery.js"></script>
-   <script src="script/loginclass.js" ></script>
+   <script src="script/main.js" ></script>
    <script src="script/mouse.parallax.js"></script>
    <script src="script/script.js"></script>
 </body>

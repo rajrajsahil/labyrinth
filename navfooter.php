@@ -32,7 +32,7 @@
      
 
    <script src="script/jquery.js"></script>
-   <script src="script/loginclass.js" ></script>
+   <script src="script/main.js" ></script>
    <script src="script/mouse.parallax.js"></script>
    <script src="script/script.js"></script>
 </body>
