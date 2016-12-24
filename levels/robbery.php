@@ -12,8 +12,6 @@
              <p><span>B.</span>&emsp;  is <span id="queen">not</span> the hint.</p>
          </div>
          <div id="levelRight"> 
-            <!-- <img src="../images/gravity-detached.jpg"> -->
-
          </div>
          <div id="answer">
              <div class="buttonCont">

@@ -1,6 +1,6 @@
 <?php
-     // $pagen = 16;
-     // include "../levels.php";
+     $pagen = 16;
+     include "../levels.php";
      include "header.php";
   ?>
       <div id="intro">
