@@ -7,7 +7,7 @@
 
             #yes_no {
                         margin:30%;
-                        cursor:hand;
+                        cursor:all-scroll;
             }
             #actor_name{
                 display:none;
@@ -41,7 +41,7 @@
         $(document).ready(function()
         {   
             var count = 0;
-            $(document).click(function()
+            $("#yes_no").click(function()
             {
                 var flag = Math.random()*10;
                 if(flag>5)

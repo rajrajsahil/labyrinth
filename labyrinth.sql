@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.5.4.1deb2ubuntu2
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Dec 25, 2016 at 08:22 AM
--- Server version: 10.1.10-MariaDB
--- PHP Version: 5.5.33
+-- Host: localhost:80
+-- Generation Time: Dec 25, 2016 at 04:19 PM
+-- Server version: 5.7.16-0ubuntu0.16.04.1
+-- PHP Version: 7.0.8-0ubuntu0.16.04.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -48,7 +48,7 @@ INSERT INTO `level_answer` (`levelname`, `level`, `answer`) VALUES
 ('bb', 9, 'amitabhbacchan'),
 ('av', 10, 'amanverma'),
 ('release', 11, '1966'),
-('robbery', 12, '12'),
+('robbery', 12, 'mumbai'),
 ('nature', 13, 'karishmakudratka'),
 ('song', 14, 'suroor'),
 ('orphan', 15, 'shekharkapur'),
@@ -114,7 +114,7 @@ INSERT INTO `timing` (`username`, `regtime`, `level`, `current`, `level1`, `leve
 ('esestwe1', 1477750886, 1, 1477750886, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('fast', 1477729534, 1, 1477729534, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('gulu', 1478251793, 9, 1481304100, 1481303755, 1481303845, 1481303855, 1481303862, 1481303871, 1481303886, 1481303988, 1481304100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-('guna', 1478251839, 1, 1478251839, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+('guna', 1478251839, 21, 1482652857, 1482651476, 1482651495, 1482651530, 1482651565, 1482651587, 1482651627, 1482651646, 1482651660, 1482651685, 1482651708, 1482651727, 1482651791, 1482651807, 1482651824, 1482651882, 1482651901, 1482652797, 1482652814, 1482652829, 1482652857),
 ('guru', 1478251232, 11, 1481488138, 1481229048, 1481229060, 1481263584, 1481263591, 1481263600, 1481263617, 1481263629, 1481263761, 1481488124, 1481488138, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('gvhgvhh', 1477742762, 1, 1477742762, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 ('harsh', 1477558701, 10, 1477741781, 1477558708, 1477558713, 1477649386, 1477649406, 1477649417, 1477651009, 1477651016, 1477740329, 1477741781, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
@@ -176,7 +176,7 @@ INSERT INTO `user_details` (`id`, `username`, `password`, `email`, `contact`, `l
 (71, 'check', '0ba4439ee9a46d9d9f14c60f88f45f87', 'check@gmail.com', 3243545167, 6, 1),
 (77, 'checkpower', '32a3291d1bfb1ed96b8b5346c7299d9d', 'ch@ad.sad', 1212343490, 1, 1),
 (62, 'gulu', 'c8ed227e4203fb8d3b553a8432bb219c', 'gulu@gmail.com', 1234567866, 9, 1),
-(63, 'guna', '6e6b00b1d17718deb07a0d6c231e2271', 'guna@gmail.com', 1212343456, 1, 1),
+(63, 'guna', '6e6b00b1d17718deb07a0d6c231e2271', 'guna@gmail.com', 1212343456, 21, 1),
 (59, 'guru', '77e69c137812518e359196bb2f5e9bb9', 'GURU@gmail.com', 1234554321, 11, 1),
 (69, 'jadu', 'd1ff5cbd672ef29289975a396c62848b', 'jadu@gmail.com', 1234565478, 4, 1),
 (68, 'jatav', '70013e39d162fd5b689d36bba62aa7df', 'jatav@jatav.com', 9898090912, 2, 1),

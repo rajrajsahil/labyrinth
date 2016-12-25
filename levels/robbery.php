@@ -36,7 +36,7 @@
         if(flag==1)
         {
             $("#levelRight").html("<img src='../images/robbery.jpg'>");
-            $(this).html("<strong>date</strong>");
+            $(this).html("<strong>place</strong>");
 
         }
     });

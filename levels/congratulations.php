@@ -21,6 +21,12 @@ else
    	<link rel="stylesheet" href="../css/main.css">
    	<link rel="stylesheet" href="../css/levels.css">
    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <style type="text/css">
+      #congrats{
+        width:100%;
+        height:100%;
+      }
+    </style>
 </head>
 <body>
 	<div id="background" class="mouse-bg" style="background-image: url('../images/bg.png');"></div>
@@ -29,8 +35,9 @@ else
       <?php
        include "header.php";
       ?>
-      	<div id="intro" style="border:2px solid red;">
+      	<div id="intro">
          	<div id="levelLeft">
+
             	<div id="levelHead">
                 	<h1>Congratulation
 						<?php
@@ -39,9 +46,13 @@ else
     					?>
                 	</h1>
             	</div>
-            <p>Description</p>
+            
 			</div>
+      <div id="levelRight">
+              <img id="congrats" src="../images/congratulation.gif">
+         </div>
         </div>
+
       	<?php
          include "footer.php";
        	?>
