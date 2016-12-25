@@ -12,6 +12,17 @@
 <body>
    <div id="background" class="mouse-bg" style="background-image: url('../images/bg.png');"></div>
    <div class="foreground"></div>
+   <div class="ajax-progress">
+      <section id="ms">
+         <div class="ajaxloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+      </section>
+   </div>
    <div id="inner">
          <nav>
          <div class="container">

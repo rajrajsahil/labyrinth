@@ -50,7 +50,7 @@
    <script src="../script/main.js" ></script>
    <script src="../script/mouse.parallax.js"></script>
    <script src="../script/script.js"></script>
-   
+   <script src="../script/ajaxGlobalHandler.js"></script>
 </body>
 </body>
 </html>

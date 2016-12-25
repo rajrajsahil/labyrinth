@@ -52,6 +52,140 @@ body{
 	top: 10px;
 	overflow: hidden;
 }
+/*=================Global ajax event handler===============*/
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  margin: 0;
+}
+body.progress {
+  cursor: progress !important;
+}
+body.progress * {
+  pointer-events: none !important;
+}
+#ms {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: calc(100% - 10px);
+	visibility: hidden;
+	z-index: 1100;
+}
+#ms.show {
+	visibility: visible !important;
+}
+.ajaxloader span {
+	display: inline-block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+  border-radius:5px;
+}
+#ms.show .ajaxloader span {
+	-webkit-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-moz-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-ms-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-o-animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	animation: move 2.5s infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+#ms.show .ajaxloader span:nth-child(2) {
+	-webkit-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-moz-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-ms-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-o-animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	animation: move 2.5s 100ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+#ms.show .ajaxloader span:nth-child(3) {
+	-webkit-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-moz-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-ms-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-o-animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	animation: move 2.5s 200ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+#ms.show .ajaxloader span:nth-child(4) {
+	-webkit-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-moz-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-ms-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-o-animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	animation: move 2.5s 300ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+#ms.show .ajaxloader span:nth-child(5) {
+	-webkit-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-moz-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-ms-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	-o-animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+	animation: move 2.5s 400ms infinite cubic-bezier(0.2, 0.64, 0.81, 0.23);
+}
+
+@-webkit-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: black;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@-moz-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: black;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@-ms-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: black;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@-o-keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: black;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
+@keyframes move {
+	0% {
+		left: -4px;
+		background-color: transparent;
+	}
+	25%,75% {
+		background-color: black;
+	}
+	100% {
+		left: calc(100% + 4px);
+		background-color: transparent;
+	}
+}
 /*=================Navbar========================*/
 nav{
 	height:64px;
@@ -351,11 +485,6 @@ input:focus:-ms-input-placeholder {
 	height:50px;
 	margin: 7px 10px;
 }
-
-
-/*====================== heading of pages ================= */
-
-
 /* ===================== CSS of about page =============== */
 .about{
 	color:white;

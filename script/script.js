@@ -16,10 +16,6 @@ $(document).ready(function(){
 		$('.foreground').css('background-color','rgba('+r+','+g+','+b+',0.7)');
 	}, 300000);
 
-	$( document ).ajaxComplete(function( event,request, settings ) {
-	  $( "#msg" ).append( "<li>Request Complete.</li>" );
-	});
-
 	$('#background').mouseParallax({ moveFactor: 2 });
 	$(document).on('click', "#signIn", function () {
 		$('.loginHome').fadeOut(300);
