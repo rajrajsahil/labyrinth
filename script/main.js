@@ -118,9 +118,17 @@ $(document).ready(function (argument) {
 			     }
 		}); 
 	});
+	$('#goBack').click(function(event) {		       
+		$.ajax({
+				url: "../controller.php",
+				data : {functionname:"logout"},
+				type: "POST",
+				success: function (result) {
 
-
-
+					window.location = '../index.php';
+			     }
+		}); 
+	});	
 
 
 // ********************************SIGN UP VALIDATION AND SIGNUP ***************************************************************

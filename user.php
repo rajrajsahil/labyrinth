@@ -24,9 +24,18 @@ class User {
                     $stmt1 = $this->db->prepare("SELECT * FROM level_answer WHERE level=:level");
                     $stmt1->execute(array(":level"=>$level));
                     $levname=$stmt1->fetch(PDO::FETCH_ASSOC); 
-                    $levelname=$levname['levelname'];   
-                    $_SESSION['levelname']= $levelname;               
-                    return $levelname;
+                    if($level<21)
+                    { 
+                      $levelname=$levname['levelname'];
+                      $_SESSION['levelname']= $levelname;               
+                      return $levelname;
+                    }
+                    else
+                    {
+                      $levelname="congratulations";
+                      $_SESSION['levelname']= "congratulations";               
+                      return $levelname;
+                    }
                   }
                   else 
                   {
