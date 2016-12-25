@@ -4,25 +4,26 @@ $(document).ready(function(){
 		$('#ms').addClass('show');
 	});
 
-	// $(".result").ajaxSend(function(){
+	// $(document).ajaxSend(function(){
 	// 	console.log('ajaxSend triggered');
 	// });
 
-	$(".result").ajaxError(function(){
+	$(document).ajaxError(function(){
 		$('.ajax-progress').removeClass('progress');
 		$('#ms').removeClass('show');
 	});
 
-	// $(".result").ajaxComplete(function(){
-	// 	console.log('ajaxComplete triggered');
-	// });
-
-	$(".result").ajaxStop(function(){
+	$(document).ajaxComplete(function(){
 		$('.ajax-progress').removeClass('progress');
 		$('#ms').removeClass('show');
 	});
 
-	$(".result").ajaxSuccess(function() {
+	$(document).ajaxStop(function(){
+		$('.ajax-progress').removeClass('progress');
+		$('#ms').removeClass('show');
+	});
+
+	$(document).ajaxSuccess(function() {
 		$('.ajax-progress').removeClass('progress');
 		$('#ms').removeClass('show');
 	});
