@@ -34,7 +34,7 @@ else if($functionname=="nextlevel")
 	$answer = preg_replace('/\s+/', '', $answer);
 	$answer = strtolower($answer);
 	echo $user->nextlevel($answer);
-	//echo "incorrect answer";
+	
   }
 else if($functionname=="checkuser")
   {

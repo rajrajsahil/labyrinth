@@ -9,13 +9,13 @@ $(document).ready(function (argument) {
 	contactplaceholder= $('#contact').attr("placeholder");
 	credentialplaceholder=$('#user-credentials').attr("placeholder");
 	passplaceholder=$('#user-password').attr("placeholder");
-
+	placeholderorignal="Answer..";
    
     
 	$(".inputType").focusout(function() {
 		if($(this).val()=='')
 		{   
-			     
+			placeholderorignal=$(this).attr("placeholder");
 			$(this).css({"border": "2px solid red"});
 			$(this).attr('placeholder',"*required field");
 		}
@@ -29,6 +29,7 @@ $(document).ready(function (argument) {
     });
 	$(".inputType").focusin(function() {
         $(this).css({"border": "2px solid white"});
+        $(this).attr("placeholder",placeholderorignal);
     });
 
 

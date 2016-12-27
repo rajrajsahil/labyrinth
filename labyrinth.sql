@@ -43,7 +43,7 @@ INSERT INTO `level_answer` (`levelname`, `level`, `answer`) VALUES
 ('meetAgain', 4, '3idiots'),
 ('amirkhan', 5, 'rangdebasanti'),
 ('oldisgold', 6, '2037'),
-('incomplete', 7, 'humariadhurikahani'),
+('incomplete', 7, 'successful'),
 ('dontturn', 8, 'khiladi420'),
 ('bb', 9, 'amitabhbacchan'),
 ('av', 10, 'amanverma'),
