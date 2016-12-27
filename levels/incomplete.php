@@ -40,7 +40,7 @@ h2
             <h1>Level 7</h1>
         </div>
         <h2> SWAGAT NHI KAROGE HUMARA !!!</h2>
-        <input id="inputAns" type='text' class="inputType " placeholder="  Answer.." >
+        <input id="inputAns" type='text' class="inputType " autofocus="autofocus"  placeholder="  Answer.." >
     </div>
     
         <!-- <img class="clickImg" src="../images/book.jpg"> -->

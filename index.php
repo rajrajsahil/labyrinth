@@ -108,7 +108,7 @@
 	            	<input id='user-password' type="password" class="inputType" placeholder="  Passcode..">
 	            </div>
 	            <div class="buttonCont">
-	            	<input type="button" class="button" id='login-button' value="ENTER">
+	            	<input type="button " class="button " id='login-button' value="ENTER">
 	            </div>
 	            <div class="noAccount buttonCont">
 	            	Don't have an account? sign up <input type="button" class="noAcBtn" id="noAcBtn" value="Here">
@@ -132,7 +132,7 @@
                   <input type="password" id='re-password' class="inputType" placeholder="  Verify Passcode..">
                </div>
                <div class="buttonCont signUpCont">
-                  <input type="button" class="button" id='signup-button' value="SIGN UP">
+                  <input type="button" class="button " id='signup-button' value="SIGN UP">
                </div>
                <div class="alreadyMember buttonCont">
                   Have an account? log in <input type="button" class="noAcBtn" id="accBtn" value="Here">

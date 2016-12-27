@@ -15,10 +15,10 @@
          </div>
          <div id="answer">
              <div class="buttonCont">
-                <input id='level-answer' type='text' class="inputType level-answer" placeholder="  Answer.." >
+                <input id='level-answer' type='text' class="inputType level-answer" autofocus="autofocus" placeholder="  Answer.." >
             </div>
             <div class="buttonCont submitAns">
-                <input type="button" class="button level-answerbutton" id='level-answerbutton' value="SUBMIT">
+                <input type="button" class="button level-answerbutton " id='level-answerbutton' value="SUBMIT">
             </div>
          </div>
 

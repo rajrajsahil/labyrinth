@@ -364,7 +364,6 @@ $(document).ready(function (argument) {
 			$('#re-password').attr('placeholder',"*required field");
 			signupflag=0;
 		}
-		alert(signupflag);
 		if(signupflag==1)
 		{
 		 $.ajax({
@@ -440,16 +439,18 @@ $(document).ready(function (argument) {
 						alert("moved to " + result);
 						window.location = result+".php";
 						
-					}
-
-					
-                          
-                        
-
+					} 
 
 				}
 					
 			});
 		}
 	});
-});			
+//******************************Added an event to submit the answer if a user press enter***************************************************
+	$(document).keypress(function(e) {
+	    if(e.which == 13) {
+	        $(".button").click();
+	    }
+	});	
+
+});		

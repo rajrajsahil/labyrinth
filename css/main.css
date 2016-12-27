@@ -52,6 +52,7 @@ body{
 	top: 10px;
 	overflow: hidden;
 }
+
 /*=================Global ajax event handler===============*/
 body {
   width: 100%;
@@ -338,6 +339,7 @@ ul>li>a:hover{
 .button{
 	width:250px;
 	height:50px;
+	text-align: center;
 	border:2px solid white;
 	background-color: transparent;
 	color:white;

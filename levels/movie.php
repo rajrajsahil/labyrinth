@@ -16,7 +16,7 @@
          <!--https://www.google.co.in/search?q=english+to+hindi&oq=eng&aqs=chrome.0.69i59j69i57j69i61j69i60j69i61j69i59.2208j0j1&sourceid=chrome&ie=UTF-8-->
          <div id="answer">
              <div class="buttonCont">
-                <input id='level-answer' type='text' class="inputType level-answer" placeholder="  Answer.." >
+                <input id='level-answer' type='text' class="inputType level-answer" autofocus="autofocus"  placeholder="  Answer.." >
             </div>
             <div class="buttonCont submitAns">
                 <input type="button" class="button level-answerbutton" id='level-answerbutton' value="SUBMIT">
