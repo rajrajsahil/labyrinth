@@ -10,7 +10,7 @@
     font-size:20px;
     position:absolute;
     top:2vh;
-    left:67vw;
+    left:65vw;
 }
 .cardImg
 {

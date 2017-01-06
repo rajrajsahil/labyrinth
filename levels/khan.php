@@ -12,6 +12,9 @@
             #actor_name{
                 display:none;
             }
+            #level-answer{
+                display: none;
+            }
     </style>
 
       <div id="intro">
@@ -72,6 +75,7 @@
                 {   
                     $("#yes_no").off("click");
                     $("#yes_no").html("Dear ....");
+                    $("#level-answer").css("display","inline-block");
 
                 }
 

@@ -125,7 +125,7 @@ function check()
     {
          $.ajax({
                 url: "../controller.php",
-                data : {functionname:"nextlevel",answer:"successful"},
+                data : {functionname:"nextlevel",answer:"dhoop"},
                 type: "POST",
                 success:function(result)
                     {

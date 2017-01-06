@@ -188,7 +188,7 @@ $(document).ready(function(){
             $("#"+id1).find("img").addClass("clickImg");
             $("#"+id2).find("img").addClass("clickImg");
             counter1=0;
-            counter2=0;
+            counter2=0; 
             id1="";
             id2="";
             setTimeout(function(){check();},2000);
@@ -210,7 +210,7 @@ $(document).ready(function(){
             {
                         $.ajax({
                         url: "../controller.php",
-                        data : {functionname:"nextlevel",answer:"successful"},
+                        data : {functionname:"nextlevel",answer:"dabangg"},
                         type: "POST",
                         success:function(result)
                         {
