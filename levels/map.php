@@ -1,12 +1,12 @@
 <?php
-     $pagen = 2;
+     $pagen = 13;
      include "../levels.php";
      include "header.php";
   ?>
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 2</h1>
+                 <h1>Level 13</h1>
              </div>
              <p>Description</p>
          </div>
@@ -26,4 +26,3 @@
 <?php
      include "footer.php";
 ?>
-

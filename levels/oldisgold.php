@@ -26,9 +26,6 @@
         </div>
     </div>
 </div>
-<script>
-    document.getElementById("myVideo").volume=0.1;     
-</script>
 <?php
      include "footer.php";
 ?>

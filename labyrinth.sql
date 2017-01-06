@@ -38,7 +38,7 @@ CREATE TABLE `level_answer` (
 
 INSERT INTO `level_answer` (`levelname`, `level`, `answer`) VALUES
 ('power', 1, 'dhoop'),
-('map', 2, 'naksha'),
+('card', 2, 'sattepesatta'),
 ('SoniaLily', 3, 'duplicate'),
 ('meetAgain', 4, '3idiots'),
 ('amirkhan', 5, 'rangdebasanti'),
@@ -49,7 +49,7 @@ INSERT INTO `level_answer` (`levelname`, `level`, `answer`) VALUES
 ('av', 10, 'amanverma'),
 ('release', 11, '1966'),
 ('robbery', 12, 'mumbai'),
-('nature', 13, 'karishmakudratka'),
+('map', 13, 'naksha'),
 ('song', 14, 'suroor'),
 ('orphan', 15, 'shekharkapur'),
 ('movie', 16, 'baarbaardekho'),

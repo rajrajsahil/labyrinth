@@ -172,10 +172,10 @@ $(document).ready(function(){
             {
                 counter1=0;
                 counter2=0;
+                $("#"+id1).find("img").addClass("clickImg");
+                $("#"+id2).find("img").addClass("clickImg");
                 id1="";
                 id2="";
-                $("#"+id1).find("img").toggleClass("clickImg");
-                $("#"+id1).find("img").toggleClass("clickImg");
             }
         }
     });
