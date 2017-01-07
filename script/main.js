@@ -430,7 +430,16 @@ $(document).ready(function (argument) {
 				{	
 					if(result=="incorrect answer")
 					{
-						alert(result);
+						//alert(result);
+						$('#incorrect_answer').css("display","inline-block");
+						setTimeout(afterCss, 3000);
+						function afterCss()
+						{
+    						$('#incorrect_answer').css("display","none");
+						}
+						//alert("wrong ans");
+						// $('#incorrect_answer').css("display","none");
+
 						$('.level-answer').val("");
 
 					}

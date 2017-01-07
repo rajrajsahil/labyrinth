@@ -7,6 +7,41 @@
    <link rel="stylesheet" href="../css/main.css">
    <link rel="stylesheet" href="../css/levels.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+   <style type="text/css">
+      #incorrect_answer{
+                        position: absolute;
+                        top:55%;
+                        left:6%;
+                        z-index:2; 
+                        color:red;
+                        height:50px;
+                        opacity: 0;
+                        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+                        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+                        animation-name: example;
+                        animation-duration: 3s;
+                        font-size: 20px;
+                        display:none;
+
+      }
+      @-webkit-keyframes example {
+                                    0%   {opacity:0; top:55%;}
+                                    
+                                    50%  {opacity:1; top:52%;}
+                                    
+                                    100% {opacity:0; top:40%;}
+}
+
+/* Standard syntax */
+@keyframes example {
+                     0%   {opacity:0; top:55%;}
+                                    
+                     50%  {opacity:1; top:52%;}
+                                    
+                     100% {opacity:0; top:40%;}
+}
+}
+   </style>
    <script src="../script/jquery.js" ></script>
 </head>
 <body>
@@ -40,4 +75,9 @@
 
       <div class="sideLogo">
          <h1 class="labyrinth"><a href="#">Labyrinth 7.0</a></h1>
+      </div>
+
+      <!-- For incorrect answer -->
+      <div id="incorrect_answer">
+         Incorrect answer &nbsp;<span><img src="../images/sad_emoji.png" height='20' width='20'></span>
       </div>
