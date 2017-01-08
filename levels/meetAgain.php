@@ -1,14 +1,14 @@
 <?php
-     $pagen = 4;
+     $pagen = 1;
      include "../levels.php";
      include "header.php";
   ?>
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 4</h1>
+                 <h1>Level 1</h1>
              </div>
-             <p>Description</p>
+             <h2>Hai Himmat Aaaega !</h2>
          </div>
          <div id="levelRight">
              <img src="../images/sept.jpg">

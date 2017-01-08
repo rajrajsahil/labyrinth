@@ -1,5 +1,5 @@
 <?php
-     $pagen = 2;
+     $pagen = 18;
      include "../levels.php";
      include "header.php";
 ?>
@@ -110,9 +110,8 @@
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 2</h1>
+                 <h1>Level 18</h1>
              </div>
-             <p>Description</p>
              <i class="fa fa-power-off " id="iconFa"></i>
              <h2 id="hint1"></h2>
          </div>
@@ -193,7 +192,7 @@ function check(){
     }
     if (flag==7)
         {
-            $("#hint1").text("PE");
+            $("#hint1").text("___PE___");
             $(".buttonCont").show();
         }
 

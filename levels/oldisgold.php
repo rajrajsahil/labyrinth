@@ -1,16 +1,15 @@
 <?php
-     $pagen = 6;
+     $pagen = 11;
      include "../levels.php";
      include "header.php";
   ?>
 
-<!--PARENTS BE LIKE : THESE DAYS NEW SONGS ARE MADE BY REMIXING OLD ONES -->
+<!-- *****************************PARENTS BE LIKE : THESE DAYS NEW SONGS ARE MADE BY REMIXING OLD ONES***************************** -->
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
-           <h1>Level 6</h1>
+           <h1>Level 11</h1>
         </div>
-        <p>Description</p>
         </div>
         <div id="levelRight">
             <video id="myVideo" width="550" height="350" autoplay loop>

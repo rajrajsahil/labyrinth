@@ -1,5 +1,5 @@
 <?php
-     $pagen = 18;
+     $pagen = 10;
      include "../levels.php";
      include "header.php";
   ?>
@@ -11,7 +11,7 @@
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 18</h1>
+                 <h1>Level 10</h1>
              </div>
              <p>Rang de tu mohe ...</p>
          </div>

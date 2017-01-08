@@ -1,12 +1,12 @@
 <?php
-     $pagen = 12;
+     $pagen = 16;
      include "../levels.php";
      include "header.php";
   ?>
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 12</h1>
+                 <h1>Level 16</h1>
              </div>
              <p><span id="dhoom">A.</span>&emsp; &larr; is the hint.</p>
              <p><span>B.</span>&emsp;  is <span id="queen">not</span> the hint.</p>
@@ -36,7 +36,7 @@
         if(flag==1)
         {
             $("#levelRight").html("<img src='../images/robbery.jpg'>");
-            $(this).html("<strong>date</strong>");
+            $(this).html("<strong>place</strong>");
 
         }
     });

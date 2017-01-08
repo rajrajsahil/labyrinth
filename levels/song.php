@@ -1,14 +1,15 @@
 <?php
-     $pagen = 14;
+     $pagen = 7;
      include "../levels.php";
      include "header.php";
   ?>
+<!--********************************************************** 2 cube = 8 **********************************************************-->
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 14</h1>
+                 <h1>Level 7</h1>
              </div>
-             <p>Description</p>
+             
          </div>
          <div id="levelRight">
              <img src="../images/himesh.jpg">

@@ -1,10 +1,10 @@
 <?php
-     $pagen = 8;
+     $pagen = 20;
      include "../levels.php";
      include "header.php";
   ?>
 
-<!--"Please do not turn around to look . This might be helpful : https://en.wikipedia.org/wiki/Sri !! -->
+<!--*******************************This might be helpful : https://en.wikipedia.org/wiki/Sri !!********************* -->
   <style>
     #levelRight{
         width:65%;
@@ -23,9 +23,9 @@
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
-            <h1>Level 8</h1>
+            <h1>Level 20</h1>
         </div>
-        <p>Description</p>
+        <h3>Do not turn around to look</h3>
     </div>
     <div id="levelRight">
         <img  src="../images/turn.gif"">

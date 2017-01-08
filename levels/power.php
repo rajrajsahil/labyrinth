@@ -1,5 +1,5 @@
  <?php
-     $pagen = 1;
+     $pagen = 6;
      include "../levels.php";
      include "header.php";
   ?>
@@ -72,7 +72,7 @@ h2
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
-            <h1>Level 1</h1>
+            <h1>Level 6</h1>
             </div>
             <h2></h2>
     </div>
@@ -125,7 +125,7 @@ function check()
     {
          $.ajax({
                 url: "../controller.php",
-                data : {functionname:"nextlevel",answer:"dhoop"},
+                data : {functionname:"nextlevel",answer:"successful"},
                 type: "POST",
                 success:function(result)
                     {

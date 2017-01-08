@@ -1,5 +1,5 @@
 <?php
-     $pagen = 9;
+     $pagen = 13;
      include "../levels.php";
      include "header.php";
   ?>
@@ -7,9 +7,9 @@
       
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 9</h1>
+                 <h1>Level 13</h1>
              </div>
-             <p>Description</p>
+             <h2>Happy Birthday To You !</h2>
          </div>
          <div id="levelRight">
              <img id="images" src="../images/maxresdefault.jpg">
@@ -28,9 +28,7 @@
 <?php
      include "footer.php";
 ?>
-<!-- 
-BIRTHDAY
- -->
+
 <script type="text/javascript">
         var clickcount =0;
         $("#images").click(function(){

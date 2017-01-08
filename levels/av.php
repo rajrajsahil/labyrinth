@@ -1,14 +1,15 @@
 <?php
-     $pagen = 10;
+     $pagen = 14;
      include "../levels.php";
      include "header.php";
   ?>
+
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 10</h1>
+                 <h1>Level 14</h1>
              </div>
-             <p id="description">Description</p>
+             <h2 id="description">Hint &darr;</h2> 
              <div>
                   <img id="todrag" src="../images/akshay.jpg" draggable="true" ondragstart="drag(event)">
              </div>

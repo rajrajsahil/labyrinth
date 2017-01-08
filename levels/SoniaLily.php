@@ -1,5 +1,5 @@
 <?php
-     $pagen = 3;
+     $pagen = 2;
      include "../levels.php";
      include "header.php";
   ?>
@@ -11,9 +11,8 @@
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 3</h1>
+                 <h1>Level 2</h1>
              </div>
-             <p>Description</p>
          </div>
          <div id="levelRight">
              <img id="img" src="../images/srk.jpg">

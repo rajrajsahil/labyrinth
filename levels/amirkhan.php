@@ -12,7 +12,7 @@
     z-index:2;
 }
 </style>
-
+<!-- ********************************************** Mai Gabbar Tu kon?***************************************************** ? -->
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
@@ -33,7 +33,6 @@
     </div>
 
 </div>
- <!-- <script src="../script/jquery.js" ></script> -->
 <script>
     $('#speaker').click(function(){
         var holi = new Audio("../images/holi.mp3");

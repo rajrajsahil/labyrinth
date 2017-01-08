@@ -136,7 +136,7 @@ class User {
    		      //echo "New record created successfully";
     	      $_SESSION["username"]=$username;
             $_SESSION["level"]=$level;
-            $_SESSION["levelname"]="power";
+            $_SESSION["levelname"]="meetAgain";
     	      return $level;
         }
         catch(PDOException $e)

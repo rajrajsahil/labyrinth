@@ -1,19 +1,18 @@
 <?php
-     $pagen = 16;
+     $pagen = 12;
      include "../levels.php";
      include "header.php";
   ?>
+  <!--https://www.google.co.in/search?q=english+to+hindi&oq=eng&aqs=chrome.0.69i59j69i57j69i61j69i60j69i61j69i59.2208j0j1&sourceid=chrome&ie=UTF-8-->
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 16</h1>
+                 <h1>Level 12</h1>
              </div>
-             <p>Description</p>
          </div>
          <div id="levelRight">
              <h1 id="levelRighth1">LOOK</h1>
          </div>
-         <!--https://www.google.co.in/search?q=english+to+hindi&oq=eng&aqs=chrome.0.69i59j69i57j69i61j69i60j69i61j69i59.2208j0j1&sourceid=chrome&ie=UTF-8-->
          <div id="answer">
              <div class="buttonCont">
                 <input id='level-answer' type='text' class="inputType level-answer" autofocus="autofocus"  placeholder="  Answer.." >

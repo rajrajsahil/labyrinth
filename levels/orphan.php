@@ -9,7 +9,7 @@
 </body>
 </html>
 <?php
-     $pagen = 15;
+     $pagen = 19;
      include "../levels.php";
      include "header.php";
   ?>
@@ -31,7 +31,7 @@
       <div id="intro">
          <div id="levelLeft">
              <div id="levelHead">
-                 <h1>Level 15</h1>
+                 <h1>Level 19</h1>
              </div>
              <p>hint is <a href="../images/invisible.txt" download="hint">here</a></p>
          </div>

@@ -1,5 +1,5 @@
 <?php
-     $pagen = 7;
+     $pagen = 15;
      include "../levels.php";
      include "header.php";
   ?>
@@ -37,7 +37,7 @@ h2
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
-            <h1>Level 7</h1>
+            <h1>Level 15</h1>
         </div>
         <h2> SWAGAT NHI KAROGE HUMARA !!!</h2>
         <input id="inputAns" type='text' class="inputType " autofocus="autofocus"  placeholder="  Answer.." >
@@ -82,7 +82,7 @@ $(document).ready(function(){
         var input=$(this).val();
         input=input.replace(/\s/g,'')
         input=input.toLowerCase();
-        if(input=="dabang")
+        if(input=="dabangg")
         {
             $(".button").show();
             $(this).prop("readonly", true);
@@ -210,7 +210,7 @@ $(document).ready(function(){
             {
                         $.ajax({
                         url: "../controller.php",
-                        data : {functionname:"nextlevel",answer:"dabangg"},
+                        data : {functionname:"nextlevel",answer:"successful"},
                         type: "POST",
                         success:function(result)
                         {

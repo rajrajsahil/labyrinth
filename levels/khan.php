@@ -12,7 +12,7 @@
             #actor_name{
                 display:none;
             }
-            #level-answer{
+            .buttonCont{
                 display: none;
             }
     </style>
@@ -22,7 +22,7 @@
              <div id="levelHead">
                  <h1>Level 17</h1>
              </div>
-             <p>Actor name is <span id="actor">.....</span><input type="text" id="actor_name"></p>
+             <p>Actor name is <span id="actor">.....</span><input type="text" id="actor_name" autofocus="autofocus"></p>
          </div>
          <div id="levelRight">
              <h1 id="yes_no">Haan<h1>
@@ -66,16 +66,16 @@
 
                 }
             });
-            $(document).on('focusout','#actor_name',function()
+            $(document).on('keyup','#actor_name',function()
             {
                 var input = $(this).val();
                 var name = input.replace(/\s/g,'');
                 var answer = name.toLowerCase();
-                if(answer=="shahrukhkhan"||"shahrukh")
+                if(answer=="shahrukh")
                 {   
                     $("#yes_no").off("click");
                     $("#yes_no").html("Dear ....");
-                    $("#level-answer").css("display","inline-block");
+                    $(".buttonCont").css("display","inline-block");
 
                 }
 

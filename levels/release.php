@@ -1,5 +1,5 @@
 <?php
-     $pagen = 11;
+     $pagen = 8;
      include "../levels.php";
      include "header.php";
   ?>
@@ -145,7 +145,7 @@
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
-            <h1>Level 11</h1>
+            <h1>Level 8</h1>
             <div id="dateOfRel">
                 <span id="span1">JANUARY</span>
                 <span id="span2">01</span>
@@ -214,6 +214,8 @@
       setTimeout(function(){
       if(floor==3)
         setTimeout(function(){$("#levelLeft #dateOfRel").show();},400);
+      else
+        setTimeout(function(){$("#levelLeft #dateOfRel").hide();},400);
       audio.play();
       $("#rightDoor").addClass("active-right");   
       $("#leftDoor").addClass("active-left");  
