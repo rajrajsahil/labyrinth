@@ -16,11 +16,11 @@
              <p>Rang de tu mohe ...</p>
          </div>
          <div id="levelRight">
-             <img src="../images/gerua.jpg" usemap="#color">
+             <img src="../images/color_blob.jpg" usemap="#color">
          </div>
          <map name="color">
 
-             <area id="circle" shape="circle" coords="280,250,55" alt="Venus">
+             <area id="circle" shape="circle" coords="92,180,35" alt="Venus">
          </map>
          <div id="answer">
              <div class="buttonCont">

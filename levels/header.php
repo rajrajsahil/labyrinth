@@ -11,36 +11,42 @@
       #incorrect_answer{
                         position: absolute;
                         top:55%;
-                        left:6%;
+                        left:10%;
                         z-index:2; 
                         color:red;
                         height:50px;
                         opacity: 0;
-                        -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+                        -webkit-animation-name: incorrect_animation; /* Safari 4.0 - 8.0 */
                         -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
-                        animation-name: example;
+                        animation-name: incorrect_animation;
                         animation-duration: 3s;
                         font-size: 20px;
                         display:none;
+                        background-color: rgba(0,0,0,0.2);
+                        border-radius: 10px;
+                        padding-left: 20px;
+                        padding-right: 20px;
+                        padding-top: 10px;
+                        color:rgb(255,255,255);
+}
 
-      }
-      @-webkit-keyframes example {
+      @-webkit-keyframes incorrect_animation {
                                     0%   {opacity:0; top:55%;}
                                     
-                                    50%  {opacity:1; top:52%;}
+                                    50%  {opacity:1; top:47%;}
                                     
                                     100% {opacity:0; top:40%;}
 }
 
 /* Standard syntax */
-@keyframes example {
+@keyframes incorrect_animation {
                      0%   {opacity:0; top:55%;}
                                     
-                     50%  {opacity:1; top:52%;}
+                     50%  {opacity:1; top:47%;}
                                     
                      100% {opacity:0; top:40%;}
 }
-}
+
    </style>
    <script src="../script/jquery.js" ></script>
 </head>
@@ -79,5 +85,5 @@
 
       <!-- For incorrect answer -->
       <div id="incorrect_answer">
-         Incorrect answer &nbsp;<span><img src="../images/sad_emoji.png" height='20' width='20'></span>
+         <strong>Incorrect answer</strong> &nbsp;<span><img src="../images/sad_emoji.png" height='20' width='20'></span>
       </div>
