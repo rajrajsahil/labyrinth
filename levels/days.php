@@ -16,12 +16,12 @@
              <p>Rang de tu mohe ...</p>
          </div>
          <div id="levelRight">
-             <img src="../images/color_blob.jpg" usemap="#color">
+             <img src="../images/gerua.png" usemap="#color"  >
+             <map name="color">
+                <area id="circle" shape="circle" coords="166,50,52" alt="Venus">
+             </map>
          </div>
-         <map name="color">
-
-             <area id="circle" shape="circle" coords="92,180,35" alt="Venus">
-         </map>
+         
          <div id="answer">
              <div class="buttonCont">
                 <input id='level-answer' type='text' class="inputType level-answer" autofocus="autofocus" placeholder="  Answer.." >
