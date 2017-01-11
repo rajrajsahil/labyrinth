@@ -274,48 +274,72 @@ ul>li>a:hover{
 	background: transparent;
 }
 .hi{
-	padding:40px;
 	float: left;
-	text-align: center;
 }
 .introtext{
 	padding: 0;
 	margin:0;
 }
+#topDiv{
+	display:inline-flex;
+	padding:0;
+}
+
 .spring{
 	text-transform: uppercase;
 	font-size: 52px;
 	line-height: 0.5;
 	font-family: 'Lato', sans-serif;
 	font-weight: 900;
+	margin-left:-3vw;
 }
+
 .fest{
 	text-transform: uppercase;
 	font-size:82px;
 	font-family: 'Lato', sans-serif;
 	line-height: 1.1;
 	font-weight: 900;
+	margin-left:-3vw;
 }
 .iitName{
 	line-height: 0.5;
 	font-family: 'Lato', sans-serif;
 	font-weight: 100;
-	font-size:26px;
+	font-size:23px;
 	text-transform: uppercase;
+	margin-left:-3vw;
+}
+.and{
+	text-transform: uppercase;
+	font-size: 124px;
+	line-height: 0.5;
+	font-family: 'Lato', sans-serif;
+	font-weight: 500;
+	margin-left:2vw;
+	margin-top:2vh;
+}
+#logoJio{
+	margin-left:-7vw;
+	margin-top:-14vh;
+	transform:scale(0.55);
 }
 .presents{
-	margin:15px auto;
+	text-align:center;
+	margin-top:-10vh;
 	font-family: 'Great Vibes', cursive;
 	font-size: 28px;
 }
 .Labyrinth7{
+	text-align:center;
 	text-transform: uppercase;
-	font-size:36px;
+	font-size:40px;
 	font-family: 'Lato', sans-serif;
 	line-height: 1.1;
-	font-weight: 900;
+	font-weight: 700;
 }
 .lab7{
+	text-align:center;
 	line-height: 0.8;
 	text-indent: -10px;
 	letter-spacing: -10px;

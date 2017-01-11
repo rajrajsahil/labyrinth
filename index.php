@@ -1,15 +1,15 @@
 <?php
-   session_start();
-   if (isset($_SESSION['username']))
-   {
-       
-      if($_SESSION["level"]>20){
-         header ("Location: levels/congratulations.php");
-      }
-      else {
-         header ("Location:"."levels/".$_SESSION['levelname'].".php");
-      }
+session_start();
+if (isset($_SESSION['username']))
+{
+
+   if($_SESSION["level"]>20){
+      header ("Location: levels/congratulations.php");
    }
+   else {
+      header ("Location:"."levels/".$_SESSION['levelname'].".php");
+   }
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -84,100 +84,113 @@
       </div>
       <div id="intro">
          <div class="introSect hi">
-         	<div class="spring introtext">Spring</div>
-         	<div class="fest introtext">Fest</div>
-         	<div class="iitName introtext">IIT Kharagpur</div>
-         	<div class="presents introtext">presents</div>
-         	<div class="Labyrinth7 introtext">Labyrinth</div>
-         	<div class="lab7 introtext">7.0</div>
+            <div id="topDiv">
+               <div>
+                  <div class="spring introtext">Spring</div>
+                  <div class="fest introtext">Fest</div>
+                  <div class="iitName introtext">IIT Kharagpur</div>
+               </div>
+               <div>
+                  <div class='and introtext'>&</div>
+               </div>
+               <div>
+                  <img id="logoJio" src="images/jio.png" />
+               </div>
+            </div>
+
+
+            <div class="presents introtext">presents</div>
+            <div class="Labyrinth7 introtext">Labyrinth</div>
+            <div class="lab7 introtext">7.0</div>
+
          </div>
          <div class="introSect login">
-	        <div class="loginHome">
-	            <div class="buttonCont">
-	            	<input type="button" class="button" id="signIn" value="SIGN IN">
-	            </div>
-	            <div class="buttonCont">
-	            	<input type="button" class="button" id="signUp" value="SIGN UP">
-	            </div>
-	        </div>
-	        <div class="loginPage">
-	        	  <div class="buttonCont">
-	            	<input id='user-credentials' type='text' class="inputType"  autofocus="autofocus"  placeholder="  Username.." >
-	            </div>
-	            <div class="buttonCont">
-	            	<input id='user-password' type="password" class="inputType" placeholder="  Passcode..">
-	            </div>
-	            <div class="buttonCont">
-	            	<input type="button " class="button " id='login-button' value="ENTER">
-	            </div>
-	            <div class="noAccount buttonCont">
-	            	Don't have an account? sign up <input type="button" class="noAcBtn" id="noAcBtn" value="Here">
-
-	            </div>
-	        </div>
-           <div class="signUpPage">
-              <div class="buttonCont signUpCont">
-                  <input id='username' type='text' class="inputType" autofocus="autofocus" placeholder="  Username.." >
-               </div>
-               <div class="buttonCont signUpCont">
-                  <input type="email" id='email' class="inputType" placeholder="  E-Mail..">
-               </div>
-               <div class="buttonCont signUpCont">
-                  <input type="number" id='contact' class="inputType" placeholder="  Contact No..">
-               </div>
-               <div class="buttonCont signUpCont">
-                  <input type="password" id='password' class="inputType" placeholder="  Passcode..">
-               </div>
-               <div class="buttonCont signUpCont">
-                  <input type="password" id='re-password' class="inputType" placeholder="  Verify Passcode..">
-               </div>
-               <div class="buttonCont signUpCont">
-                  <input type="button" class="button " id='signup-button' value="SIGN UP">
-               </div>
-               <div class="alreadyMember buttonCont">
-                  Have an account? log in <input type="button" class="noAcBtn" id="accBtn" value="Here">
-
-               </div>
+            <div class="loginHome">
+             <div class="buttonCont">
+              <input type="button" class="button" id="signIn" value="SIGN IN">
            </div>
-         </div>
-      </div>
+           <div class="buttonCont">
+              <input type="button" class="button" id="signUp" value="SIGN UP">
+           </div>
+        </div>
+        <div class="loginPage">
+         <div class="buttonCont">
+           <input id='user-credentials' type='text' class="inputType"  autofocus="autofocus"  placeholder="  Username.." >
+        </div>
+        <div class="buttonCont">
+           <input id='user-password' type="password" class="inputType" placeholder="  Passcode..">
+        </div>
+        <div class="buttonCont">
+           <input type="button " class="button " id='login-button' value="ENTER">
+        </div>
+        <div class="noAccount buttonCont">
+           Don't have an account? sign up <input type="button" class="noAcBtn" id="noAcBtn" value="Here">
 
-      <div class="bottom">
-         <div id="iitkgpsf">
-            <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="images/iit.png"></a>
-            <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="images/favicon.png"></a>
-         </div>
-         <div id="sponsors">
-            <a href="#" target="_blank"><img class="iitLogo" src="images/kaspersky.png"></a>
-            <a href="#" target="_blank"><img class="iitLogo" src="images/znetlivelogo.png"></a>
-         </div>
+        </div>
+     </div>
+     <div class="signUpPage">
+        <div class="buttonCont signUpCont">
+         <input id='username' type='text' class="inputType" autofocus="autofocus" placeholder="  Username.." >
       </div>
-      <div class="sidePanel">
-      	<div class="social">
-            <a href="#">
-               <div class="socialDiv">
-                  <i class="fa fa-facebook-f" style="font-size:32px"></i>
-               </div>
-            </a>
-            <a href="#">
-               <div class="socialDiv">
-                  <i class="fa fa-twitter" style="font-size:32px"></i>
-               </div>
-            </a>
-            <a href="#">
-               <div class="socialDiv">
-                  <i class="fa fa-youtube-play" style="font-size:32px"></i>
-               </div>
-            </a>
-         </div>
+      <div class="buttonCont signUpCont">
+         <input type="email" id='email' class="inputType" placeholder="  E-Mail..">
+      </div>
+      <div class="buttonCont signUpCont">
+         <input type="number" id='contact' class="inputType" placeholder="  Contact No..">
+      </div>
+      <div class="buttonCont signUpCont">
+         <input type="password" id='password' class="inputType" placeholder="  Passcode..">
+      </div>
+      <div class="buttonCont signUpCont">
+         <input type="password" id='re-password' class="inputType" placeholder="  Verify Passcode..">
+      </div>
+      <div class="buttonCont signUpCont">
+         <input type="button" class="button " id='signup-button' value="SIGN UP">
+      </div>
+      <div class="alreadyMember buttonCont">
+         Have an account? log in <input type="button" class="noAcBtn" id="accBtn" value="Here">
+
       </div>
    </div>
+</div>
+</div>
 
-   <script src="script/jquery.js"></script>
-   <script src="script/main.js" ></script>
-   <script src="script/mouse.parallax.js"></script>
-   <script src="script/script.js"></script>
-   <script src="script/ajaxGlobalHandler.js"></script>
+<div class="bottom">
+   <div id="iitkgpsf">
+      <a href="http://iitkgp.ac.in/" target="_blank"><img class="iitLogo" src="images/iit.png"></a>
+      <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="images/favicon.png"></a>
+   </div>
+   <div id="sponsors">
+      <a href="#" target="_blank"><img class="iitLogo" src="images/kaspersky.png"></a>
+      <a href="#" target="_blank"><img class="iitLogo" src="images/znetlivelogo.png"></a>
+   </div>
+</div>
+<div class="sidePanel">
+ <div class="social">
+   <a href="#">
+      <div class="socialDiv">
+         <i class="fa fa-facebook-f" style="font-size:32px"></i>
+      </div>
+   </a>
+   <a href="#">
+      <div class="socialDiv">
+         <i class="fa fa-twitter" style="font-size:32px"></i>
+      </div>
+   </a>
+   <a href="#">
+      <div class="socialDiv">
+         <i class="fa fa-youtube-play" style="font-size:32px"></i>
+      </div>
+   </a>
+</div>
+</div>
+</div>
+
+<script src="script/jquery.js"></script>
+<script src="script/main.js" ></script>
+<script src="script/mouse.parallax.js"></script>
+<script src="script/script.js"></script>
+<script src="script/ajaxGlobalHandler.js"></script>
 
 </body>
 </html>
