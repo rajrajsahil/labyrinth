@@ -4,9 +4,9 @@
         <a href="http://springfest.in/" target="_blank"><img class="iitLogo" src="../images/favicon.png"></a>
       </div>
       <div id="sponsors">
-        <a href="#" target="_blank"><img class="iitLogo" src="../images/jio.png"></a>
-        <a href="#" target="_blank"><img class="iitLogo" src="../images/kaspersky.png"></a>
-        <a href="#" target="_blank"><img class="iitLogo" src="../images/znetlivelogo.png"></a>
+        <a href="https://www.jio.com/" target="_blank"><img class="iitLogo" src="../images/jio.png"></a>
+        <a href="https://www.kaspersky.co.in/" target="_blank"><img class="iitLogo" src="../images/kaspersky.png"></a>
+        <a href="https://www.znetlive.com/" target="_blank"><img class="iitLogo" src="../images/znetlivelogo.png"></a>
       </div>
     </div>
     <div class="sidePanel">

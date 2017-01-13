@@ -131,7 +131,7 @@
                </div>
                <div class="buttonCont signUpCont">
                   <input type="password" id='password' class="inputType" placeholder="  Passcode..">
-               </div>
+               </div> 
                <div class="buttonCont signUpCont">
                   <input type="password" id='re-password' class="inputType" placeholder="  Verify Passcode..">
                </div>
@@ -182,7 +182,7 @@
    <script src="script/main.js" ></script>
    <script src="script/mouse.parallax.js"></script>
    <script src="script/script.js"></script>
-   <script src="script/ajaxGlobalHandler.js"></script>
+   <script src="script/AjaxGlobalHandler.js"></script>
 
 </body>
 </html>
