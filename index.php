@@ -101,6 +101,10 @@
               </div>
           </div>
           <div class="loginPage">
+          <!-- For incorrect data -->
+              <div id="incorrect_data">
+                 <strong>Incorrect details</strong>
+              </div>
               <div class="buttonCont">
                 <input id='user-credentials' type='text' class="inputType"  autofocus="autofocus"  placeholder="  Username.." >
               </div>

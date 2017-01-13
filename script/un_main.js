@@ -83,7 +83,13 @@ $(document).ready(function (argument) {
 						       	//alert(result);
 						       		if(result==false)
 						       		{
-						       		alert("please check username password");
+						       		
+						       			$('#incorrect_data').css("display","inline-block");
+						       			setTimeout(afterCss, 3000);
+						                 function afterCss()
+						                {
+    						              $('#incorrect_data').css("display","none");
+						                }
 						       	     }
 						       	    else{
 						       		
