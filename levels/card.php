@@ -172,32 +172,7 @@ include "header.php";
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
 <script>
 
-    $('#iconFa').click(function(){
-        $(".containImgUp").fadeIn();
-    });
-    $(".containImgUp").draggable({
-        stop:function(event,ui) {        
-            check();
-        }
-    });
-    function check(){
-        var flag=0,posUp,posDown;
-        for(var i=1;i<=7;i++)
-        {
-            var j=i+7;
-            posUp=$("#containerImg"+i).position();
-            posDown=$("#containerImg"+j).position();
-            if(Math.abs(posUp.left-posDown.left)<30 && (posUp.top-posDown.top)<120)
-                flag++;
-        }
-        if (flag==7)
-        {
-            $("#hint1").text("___PE___");
-            $(".buttonCont").show();
-        }
-
-    }
-
+var _0xb6c8=["\x66\x61\x64\x65\x49\x6E","\x2E\x63\x6F\x6E\x74\x61\x69\x6E\x49\x6D\x67\x55\x70","\x63\x6C\x69\x63\x6B","\x23\x69\x63\x6F\x6E\x46\x61","\x64\x72\x61\x67\x67\x61\x62\x6C\x65","\x70\x6F\x73\x69\x74\x69\x6F\x6E","\x23\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72\x49\x6D\x67","\x6C\x65\x66\x74","\x61\x62\x73","\x74\x6F\x70","\x5F\x5F\x5F\x50\x45\x5F\x5F\x5F","\x74\x65\x78\x74","\x23\x68\x69\x6E\x74\x31","\x73\x68\x6F\x77","\x2E\x62\x75\x74\x74\x6F\x6E\x43\x6F\x6E\x74"];$(_0xb6c8[3])[_0xb6c8[2]](function(){$(_0xb6c8[1])[_0xb6c8[0]]()});$(_0xb6c8[1])[_0xb6c8[4]]({stop:function(_0xca89x1,_0xca89x2){check()}});function check(){var _0xca89x4=0,_0xca89x5,_0xca89x6;for(var _0xca89x7=1;_0xca89x7<= 7;_0xca89x7++){var _0xca89x8=_0xca89x7+ 7;_0xca89x5= $(_0xb6c8[6]+ _0xca89x7)[_0xb6c8[5]]();_0xca89x6= $(_0xb6c8[6]+ _0xca89x8)[_0xb6c8[5]]();if(Math[_0xb6c8[8]](_0xca89x5[_0xb6c8[7]]- _0xca89x6[_0xb6c8[7]])< 30&& (_0xca89x5[_0xb6c8[9]]- _0xca89x6[_0xb6c8[9]])< 120){_0xca89x4++}};if(_0xca89x4== 7){$(_0xb6c8[12])[_0xb6c8[11]](_0xb6c8[10]);$(_0xb6c8[14])[_0xb6c8[13]]()}}
 </script>
 <?php
 include "footer.php";

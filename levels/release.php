@@ -194,33 +194,7 @@ include "header.php";
 
     </div>
     <script>
-      audio.volume=0.5;
-      var current = 0;
-      $(document).ready(function(){
-
-        $("li").click(function(){
-          
-          var floor = parseInt($(this).data("floor")),
-          height = floor*20,
-          animate = Math.abs(current-floor)*1000;
-          $("#rightDoor").removeClass("active-right");   
-          $("#leftDoor").removeClass("active-left");  
-          setTimeout(function(){$("#elevatorContainer").css("transition","all "+animate+"ms linear");
-            $("#elevatorContainer").css("bottom",height+"%");
-            current = floor;
-            setTimeout(function(){
-              if(floor==3)
-                setTimeout(function(){$("#levelLeft #dateOfRel").show();},400);
-              else
-                setTimeout(function(){$("#levelLeft #dateOfRel").hide();},400);
-              audio.play();
-              $("#rightDoor").addClass("active-right");   
-              $("#leftDoor").addClass("active-left");  
-              
-            },animate);},300);
-        });
-
-      });
+      var _0x5be5=["\x76\x6F\x6C\x75\x6D\x65","\x66\x6C\x6F\x6F\x72","\x64\x61\x74\x61","\x61\x62\x73","\x61\x63\x74\x69\x76\x65\x2D\x72\x69\x67\x68\x74","\x72\x65\x6D\x6F\x76\x65\x43\x6C\x61\x73\x73","\x23\x72\x69\x67\x68\x74\x44\x6F\x6F\x72","\x61\x63\x74\x69\x76\x65\x2D\x6C\x65\x66\x74","\x23\x6C\x65\x66\x74\x44\x6F\x6F\x72","\x74\x72\x61\x6E\x73\x69\x74\x69\x6F\x6E","\x61\x6C\x6C\x20","\x6D\x73\x20\x6C\x69\x6E\x65\x61\x72","\x63\x73\x73","\x23\x65\x6C\x65\x76\x61\x74\x6F\x72\x43\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x62\x6F\x74\x74\x6F\x6D","\x25","\x73\x68\x6F\x77","\x23\x6C\x65\x76\x65\x6C\x4C\x65\x66\x74\x20\x23\x64\x61\x74\x65\x4F\x66\x52\x65\x6C","\x68\x69\x64\x65","\x70\x6C\x61\x79","\x61\x64\x64\x43\x6C\x61\x73\x73","\x63\x6C\x69\x63\x6B","\x6C\x69","\x72\x65\x61\x64\x79"];audio[_0x5be5[0]]= 0.5;var current=0;$(document)[_0x5be5[23]](function(){$(_0x5be5[22])[_0x5be5[21]](function(){var _0x3c48x2=parseInt($(this)[_0x5be5[2]](_0x5be5[1])),_0x3c48x3=_0x3c48x2* 20,_0x3c48x4=Math[_0x5be5[3]](current- _0x3c48x2)* 1000;$(_0x5be5[6])[_0x5be5[5]](_0x5be5[4]);$(_0x5be5[8])[_0x5be5[5]](_0x5be5[7]);setTimeout(function(){$(_0x5be5[13])[_0x5be5[12]](_0x5be5[9],_0x5be5[10]+ _0x3c48x4+ _0x5be5[11]);$(_0x5be5[13])[_0x5be5[12]](_0x5be5[14],_0x3c48x3+ _0x5be5[15]);current= _0x3c48x2;setTimeout(function(){if(_0x3c48x2== 3){setTimeout(function(){$(_0x5be5[17])[_0x5be5[16]]()},400)}else {setTimeout(function(){$(_0x5be5[17])[_0x5be5[18]]()},400)};audio[_0x5be5[19]]();$(_0x5be5[6])[_0x5be5[20]](_0x5be5[4]);$(_0x5be5[8])[_0x5be5[20]](_0x5be5[7])},_0x3c48x4)},300)})})
     </script>
 
     <?php

@@ -94,7 +94,6 @@ $(document).ready(function (argument) {
 						       		}
 						       		else
 						       		{
-						       			alert("you are in " +result);
 						       			window.location.href = "levels/"+result+".php";
 						       			//$(location).attr("href", "level"+result+".php");
 						       		}
@@ -445,7 +444,7 @@ $(document).ready(function (argument) {
 					}
 					else
 					{
-						alert("moved to " + result);
+						
 						window.location = result+".php";
 						
 					} 

@@ -41,44 +41,5 @@ include "header.php";
 include "footer.php"; 
 ?>
 <script type="text/javascript">
-    $(document).ready(function()
-    {   
-        var count = 0;
-        $("#yes_no").click(function()
-        {
-            var flag = Math.random()*10;
-            if(flag>5)
-            {
-                $(this).html("Haan");
-            }
-            else
-            {
-                $(this).html("Naa");
-            }
-        });
-        $(document).on('click','#actor',function()
-        {
-            count++;
-            if(count%2==0)
-            {   
-                $(this).css("display","none");
-                $("#actor_name").css("display","inline");
-
-            }
-        });
-        $(document).on('keyup','#actor_name',function()
-        {
-            var input = $(this).val();
-            var name = input.replace(/\s/g,'');
-            var answer = name.toLowerCase();
-            if(answer=="shahrukh")
-            {   
-                $("#yes_no").off("click");
-                $("#yes_no").html("Dear ....");
-                $(".buttonCont").css("display","inline-block");
-
-            }
-
-        })
-    })
+var _0xff1d=["\x72\x61\x6E\x64\x6F\x6D","\x48\x61\x61\x6E","\x68\x74\x6D\x6C","\x4E\x61\x61","\x63\x6C\x69\x63\x6B","\x23\x79\x65\x73\x5F\x6E\x6F","\x23\x61\x63\x74\x6F\x72","\x64\x69\x73\x70\x6C\x61\x79","\x6E\x6F\x6E\x65","\x63\x73\x73","\x69\x6E\x6C\x69\x6E\x65","\x23\x61\x63\x74\x6F\x72\x5F\x6E\x61\x6D\x65","\x6F\x6E","\x6B\x65\x79\x75\x70","\x76\x61\x6C","","\x72\x65\x70\x6C\x61\x63\x65","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x73\x68\x61\x68\x72\x75\x6B\x68","\x6F\x66\x66","\x44\x65\x61\x72\x20\x2E\x2E\x2E\x2E","\x69\x6E\x6C\x69\x6E\x65\x2D\x62\x6C\x6F\x63\x6B","\x2E\x62\x75\x74\x74\x6F\x6E\x43\x6F\x6E\x74","\x72\x65\x61\x64\x79"];$(document)[_0xff1d[23]](function(){var _0x349ax1=0;$(_0xff1d[5])[_0xff1d[4]](function(){var _0x349ax2=Math[_0xff1d[0]]()* 10;if(_0x349ax2> 5){$(this)[_0xff1d[2]](_0xff1d[1])}else {$(this)[_0xff1d[2]](_0xff1d[3])}});$(document)[_0xff1d[12]](_0xff1d[4],_0xff1d[6],function(){_0x349ax1++;if(_0x349ax1% 2== 0){$(this)[_0xff1d[9]](_0xff1d[7],_0xff1d[8]);$(_0xff1d[11])[_0xff1d[9]](_0xff1d[7],_0xff1d[10])}});$(document)[_0xff1d[12]](_0xff1d[13],_0xff1d[11],function(){var _0x349ax3=$(this)[_0xff1d[14]]();var _0x349ax4=_0x349ax3[_0xff1d[16]](/\s/g,_0xff1d[15]);var _0x349ax5=_0x349ax4[_0xff1d[17]]();if(_0x349ax5== _0xff1d[18]){$(_0xff1d[5])[_0xff1d[19]](_0xff1d[4]);$(_0xff1d[5])[_0xff1d[2]](_0xff1d[20]);$(_0xff1d[22])[_0xff1d[9]](_0xff1d[7],_0xff1d[21])}})})
 </script>

@@ -36,18 +36,5 @@ include "header.php";
 include "footer.php";
 ?>
 <script type="text/javascript">
-    $(document).ready(function(){
-        var count=0;
-        $(document).on('click','#circle',function(){
-            count++;
-            if(count%2!=0)
-            {
-                $("#level-answer").attr("placeholder","15 saal 4 mahine ...");
-            }
-            else
-            {
-                $("#level-answer").attr("placeholder","  Answer..");
-            }
-        });
-    })
+var _0x743a=["\x63\x6C\x69\x63\x6B","\x23\x63\x69\x72\x63\x6C\x65","\x70\x6C\x61\x63\x65\x68\x6F\x6C\x64\x65\x72","\x31\x35\x20\x73\x61\x61\x6C\x20\x34\x20\x6D\x61\x68\x69\x6E\x65\x20\x2E\x2E\x2E","\x61\x74\x74\x72","\x23\x6C\x65\x76\x65\x6C\x2D\x61\x6E\x73\x77\x65\x72","\x20\x20\x41\x6E\x73\x77\x65\x72\x2E\x2E","\x6F\x6E","\x72\x65\x61\x64\x79"];$(document)[_0x743a[8]](function(){var _0x9526x1=0;$(document)[_0x743a[7]](_0x743a[0],_0x743a[1],function(){_0x9526x1++;if(_0x9526x1% 2!= 0){$(_0x743a[5])[_0x743a[4]](_0x743a[2],_0x743a[3])}else {$(_0x743a[5])[_0x743a[4]](_0x743a[2],_0x743a[6])}})})
 </script>

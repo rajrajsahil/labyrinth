@@ -45,10 +45,7 @@ include "header.php";
 
 </div>
 <script>
-    $('#speaker').click(function(){
-        var holi = new Audio("../images/holi.mp3");
-        holi.play();
-    });
+    var _0x7b28=["\x2E\x2E\x2F\x69\x6D\x61\x67\x65\x73\x2F\x68\x6F\x6C\x69\x2E\x6D\x70\x33","\x70\x6C\x61\x79","\x63\x6C\x69\x63\x6B","\x23\x73\x70\x65\x61\x6B\x65\x72"];$(_0x7b28[3])[_0x7b28[2]](function(){var _0x4669x1= new Audio(_0x7b28[0]);_0x4669x1[_0x7b28[1]]()})
 </script>
 <?php
 include "footer.php";
