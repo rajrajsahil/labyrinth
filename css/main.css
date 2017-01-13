@@ -513,13 +513,7 @@ input:focus:-ms-input-placeholder {
 	font-size:25px;
 }
 /* ******************** CSS of rules page ******************************* */
-.aboutHeading ol{
-	padding:0 100px;
-}
-.aboutHeading ol li{
-	font-weight: 100;
-	font-size: 17px;
-}
+
 .aboutHeading ol li a{
 	color:white;
 	font-weight: 400;
