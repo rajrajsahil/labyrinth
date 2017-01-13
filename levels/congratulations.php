@@ -2,7 +2,7 @@
 session_start();
 if(!isset($_SESSION['username']))
 {
-header('Location:'.'../index'.'.php');
+    header('Location:'.'../index'.'.php');
 }
 else
 {
@@ -17,8 +17,8 @@ else
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   	<title>Labyrinth 7.0 | Spring Fest 2017</title>
-   	<link rel="shortcut icon" href="../images/favicon.png">
+    <title>Labyrinth 7.0 | Spring Fest 2017</title>
+    <link rel="shortcut icon" href="../images/favicon.png">
     <style>
         @import url(http://fonts.googleapis.com/css?family=Lato:100,400,900);
         body, html {
@@ -156,19 +156,19 @@ else
 
 
         var canvas = document.getElementById("canvas"),
-            ctx = canvas.getContext("2d"),
-            width = 0,
-            height = 0,
-            vanishPointY = 0,
-            vanishPointX = 0,
-            focalLength = 300,
-            angleX = 180,
-            angleY = 180,
-            angleZ = 180,
-            angle = 0,
-            cycle = 0,
-            colors = {r : 255, g : 0, b : 0},
-            lastShot = new Date().getTime();
+        ctx = canvas.getContext("2d"),
+        width = 0,
+        height = 0,
+        vanishPointY = 0,
+        vanishPointX = 0,
+        focalLength = 300,
+        angleX = 180,
+        angleY = 180,
+        angleZ = 180,
+        angle = 0,
+        cycle = 0,
+        colors = {r : 255, g : 0, b : 0},
+        lastShot = new Date().getTime();
 
         canvas.width = width;
         canvas.height = height;
@@ -176,15 +176,15 @@ else
         /*
          *  Controls the emitter
          */
-        function Emitter() {
+         function Emitter() {
             this.reset();
         }
 
         Emitter.prototype.reset = function () {
             var PART_NUM = 200,
-                x = (Math.random() * 400) - 200,
-                y = (Math.random() * 400) - 200,
-                z = (Math.random() * 800) - 200;
+            x = (Math.random() * 400) - 200,
+            y = (Math.random() * 400) - 200,
+            z = (Math.random() * 800) - 200;
             
             this.x = x || 0;
             this.y = y || 0;
@@ -218,44 +218,44 @@ else
             
             if(this.particles.length <= 0){
               this.reset();   
+          }
+
+      };
+
+      Emitter.prototype.render = function (imgData) {
+        var data = imgData.data;
+
+        for (i = 0; i < this.particles.length; i++) {
+            var particle = this.particles[i],
+            dist = Math.sqrt((particle.x - particle.ox) * (particle.x - particle.ox) + (particle.y - particle.oy) * (particle.y - particle.oy) + (particle.z - particle.oz) * (particle.z - particle.oz));
+
+            if (dist > 255) {
+                particle.render = false;
+                this.particles.splice(i, 1);
+                this.particles.length--;
             }
 
-        };
-
-        Emitter.prototype.render = function (imgData) {
-            var data = imgData.data;
-
-            for (i = 0; i < this.particles.length; i++) {
-                var particle = this.particles[i],
-                    dist = Math.sqrt((particle.x - particle.ox) * (particle.x - particle.ox) + (particle.y - particle.oy) * (particle.y - particle.oy) + (particle.z - particle.oz) * (particle.z - particle.oz));
-
-                if (dist > 255) {
-                    particle.render = false;
-                    this.particles.splice(i, 1);
-                    this.particles.length--;
-                }
-
-                if (particle.render && particle.xPos < width && particle.xPos > 0 && particle.yPos > 0 && particle.yPos < height) {
-                    for (w = 0; w < particle.size; w++) {
-                        for (h = 0; h < particle.size; h++) {
-                            if (particle.xPos + w < width && particle.xPos + w > 0 && particle.yPos + h > 0 && particle.yPos + h < height) {
-                                pData = (~~ (particle.xPos + w) + (~~ (particle.yPos + h) * width)) * 4;
-                                data[pData] = particle.color[0];
-                                data[pData + 1] = particle.color[1];
-                                data[pData + 2] = particle.color[2];
-                                data[pData + 3] = 255 - dist;
-                            }
+            if (particle.render && particle.xPos < width && particle.xPos > 0 && particle.yPos > 0 && particle.yPos < height) {
+                for (w = 0; w < particle.size; w++) {
+                    for (h = 0; h < particle.size; h++) {
+                        if (particle.xPos + w < width && particle.xPos + w > 0 && particle.yPos + h > 0 && particle.yPos + h < height) {
+                            pData = (~~ (particle.xPos + w) + (~~ (particle.yPos + h) * width)) * 4;
+                            data[pData] = particle.color[0];
+                            data[pData + 1] = particle.color[1];
+                            data[pData + 2] = particle.color[2];
+                            data[pData + 3] = 255 - dist;
                         }
                     }
                 }
             }
-        };
+        }
+    };
 
 
         /*
          *  Controls the individual particles
          */
-        function Particle(x, y, z, color) {
+         function Particle(x, y, z, color) {
             this.x = x;
             this.y = y;
             this.z = z;
@@ -283,15 +283,15 @@ else
 
         Particle.prototype.rotate = function () {
             var x = this.startX * Math.cos(angleZ) - this.startY * Math.sin(angleZ),
-                y = this.startY * Math.cos(angleZ) + this.startX * Math.sin(angleZ);
+            y = this.startY * Math.cos(angleZ) + this.startX * Math.sin(angleZ);
 
-             this.x = x;
-             this.y = y;
+            this.x = x;
+            this.y = y;
         }
 
         Particle.prototype.update = function () {
             var cosY = Math.cos(angleX),
-                sinY = Math.sin(angleX);
+            sinY = Math.sin(angleX);
 
             this.x = (this.startX += this.vx);
             this.y = (this.startY += this.vy);

@@ -9,43 +9,43 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
    <style type="text/css">
       #incorrect_answer{
-                        position: absolute;
-                        top:55%;
-                        left:10%;
-                        z-index:2; 
-                        color:red;
-                        height:50px;
-                        opacity: 0;
-                        -webkit-animation-name: incorrect_animation; /* Safari 4.0 - 8.0 */
-                        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
-                        animation-name: incorrect_animation;
-                        animation-duration: 3s;
-                        font-size: 20px;
-                        display:none;
-                        background-color: rgba(0,0,0,0.2);
-                        border-radius: 10px;
-                        padding-left: 20px;
-                        padding-right: 20px;
-                        padding-top: 10px;
-                        color:rgb(255,255,255);
-}
+         position: absolute;
+         top:55%;
+         left:10%;
+         z-index:2; 
+         color:red;
+         height:50px;
+         opacity: 0;
+         -webkit-animation-name: incorrect_animation; /* Safari 4.0 - 8.0 */
+         -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+         animation-name: incorrect_animation;
+         animation-duration: 3s;
+         font-size: 20px;
+         display:none;
+         background-color: rgba(0,0,0,0.2);
+         border-radius: 10px;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-top: 10px;
+         color:rgb(255,255,255);
+      }
 
       @-webkit-keyframes incorrect_animation {
-                                    0%   {opacity:0; top:55%;}
-                                    
-                                    50%  {opacity:1; top:47%;}
-                                    
-                                    100% {opacity:0; top:40%;}
-}
+         0%   {opacity:0; top:55%;}
+         
+         50%  {opacity:1; top:47%;}
+         
+         100% {opacity:0; top:40%;}
+      }
 
-/* Standard syntax */
-@keyframes incorrect_animation {
-                     0%   {opacity:0; top:55%;}
-                                    
-                     50%  {opacity:1; top:47%;}
-                                    
-                     100% {opacity:0; top:40%;}
-}
+      /* Standard syntax */
+      @keyframes incorrect_animation {
+         0%   {opacity:0; top:55%;}
+         
+         50%  {opacity:1; top:47%;}
+         
+         100% {opacity:0; top:40%;}
+      }
 
    </style>
    <script src="../script/jquery.js" ></script>
@@ -65,7 +65,7 @@
       </section>
    </div>
    <div id="inner">
-         <nav>
+      <nav>
          <div class="container">
             <div class="nav-wrapper">
                <ul>

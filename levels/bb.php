@@ -1,42 +1,42 @@
 <?php
-     $pagen = 13;
-     include "../levels.php";
-     include "header.php";
-  ?>
-      <div id="intro">
-      
-         <div id="levelLeft">
-             <div id="levelHead">
-                 <h1>Level 13</h1>
-             </div>
-             <h2>Happy Birthday To You !</h2>
-         </div>
-         <div id="levelRight">
-             <img id="images" src="../images/maxresdefault.jpg">
-         </div>
-         <div id="answer">
-             <div class="buttonCont">
-                <input id='level-answer' type='text' class="inputType level-answer" autofocus="autofocus" placeholder="  Answer.." >
-            </div>
-            <div class="buttonCont submitAns">
-                <input type="button" class="button level-answerbutton" id='level-answerbutton' value="SUBMIT">
-            </div>
-         </div>
+$pagen = 13;
+include "../levels.php";
+include "header.php";
+?>
+<div id="intro">
+  
+   <div id="levelLeft">
+       <div id="levelHead">
+           <h1>Level 13</h1>
+       </div>
+       <h2>Happy Birthday To You !</h2>
+   </div>
+   <div id="levelRight">
+       <img id="images" src="../images/maxresdefault.jpg">
+   </div>
+   <div id="answer">
+       <div class="buttonCont">
+        <input id='level-answer' type='text' class="inputType level-answer" autofocus="autofocus" placeholder="  Answer.." >
+    </div>
+    <div class="buttonCont submitAns">
+        <input type="button" class="button level-answerbutton" id='level-answerbutton' value="SUBMIT">
+    </div>
+</div>
 
-      </div>
+</div>
 
 <?php
-     include "footer.php";
+include "footer.php";
 ?>
 
 <script type="text/javascript">
-        var clickcount =0;
-        $("#images").click(function(){
-            
-            clickcount++;
-            console.log(clickcount);
-            if(clickcount%3==1)
-            {   
+    var clickcount =0;
+    $("#images").click(function(){
+        
+        clickcount++;
+        console.log(clickcount);
+        if(clickcount%3==1)
+        {   
                 //alert("clicked");
                 $(this).attr("src","../images/dus8P.jpg");
             }
@@ -47,8 +47,8 @@
             }
             else
             {
-                 $(this).attr("src","../images/maxresdefault.jpg");
-            }
-        });
-</script>
+               $(this).attr("src","../images/maxresdefault.jpg");
+           }
+       });
+   </script>
 

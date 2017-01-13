@@ -1,18 +1,29 @@
 <?php
-     $pagen = 5;
-     include "../levels.php";
-     include "header.php";
-  ?>
+$pagen = 5;
+include "../levels.php";
+include "header.php";
+?>
 
 <style>
-#speaker
-{
-    width:30%;
-    height:30%;
-    z-index:2;
-}
+    #speaker
+    {
+        width:30%;
+        height:30%;
+        z-index:2;
+    }
 </style>
-<!-- ********************************************** Mai Gabbar Tu kon?***************************************************** ? -->
+<!--
+
+
+
+
+ ********************************************** Mai Gabbar Tu kon?***************************************************** ?
+
+
+
+
+
+  -->
 <div id="intro">
     <div id="levelLeft">
         <div id="levelHead">
@@ -40,5 +51,5 @@
     });
 </script>
 <?php
-     include "footer.php";
+include "footer.php";
 ?>

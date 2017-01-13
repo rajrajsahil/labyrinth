@@ -1,33 +1,33 @@
 <?php
-     $pagen = 15;
-     include "../levels.php";
-     include "header.php";
-  ?>
+$pagen = 15;
+include "../levels.php";
+include "header.php";
+?>
 <style>
-h2
-{
-    margin-top:10vh;
-}
-.imgContainer
-{
-    padding:0;
-    position:absolute;
-    transition-duration: 1s;
+    h2
+    {
+        margin-top:10vh;
+    }
+    .imgContainer
+    {
+        padding:0;
+        position:absolute;
+        transition-duration: 1s;
 
-}
-.imgContainer img
-{
-    height:9vw;
-    width:9vw;
-    cursor:pointer;
-}
-.clickImg
-{
-  -webkit-filter: grayscale(1);
-    filter: grayscale(1);  
-}
-.button
-{
+    }
+    .imgContainer img
+    {
+        height:9vw;
+        width:9vw;
+        cursor:pointer;
+    }
+    .clickImg
+    {
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);  
+  }
+  .button
+  {
     margin-top:65vh;
     margin-left:36.5vw;
     display:none;
@@ -42,8 +42,6 @@ h2
         <h2> SWAGAT NHI KAROGE HUMARA !!!</h2>
         <input id="inputAns" type='text' class="inputType " autofocus="autofocus"  placeholder="  Answer.." >
     </div>
-    
-        <!-- <img class="clickImg" src="../images/book.jpg"> -->
     <div class="imgContainer" id="container1" >
         <img class="clickImg" src ="../images/dp1.jpeg" />
     </div>
@@ -74,35 +72,35 @@ h2
     <input type="button" class="button " value="SWAP">
 </div>
 <?php
-     include "footer.php";
+include "footer.php";
 ?>
 <script>
-$(document).ready(function(){
-    $("#inputAns").keyup(function(){
-        var input=$(this).val();
-        input=input.replace(/\s/g,'')
-        input=input.toLowerCase();
-        if(input=="dabangg")
+    $(document).ready(function(){
+        $("#inputAns").keyup(function(){
+            var input=$(this).val();
+            input=input.replace(/\s/g,'')
+            input=input.toLowerCase();
+            if(input=="dabangg")
+            {
+                $(".button").show();
+                $(this).prop("readonly", true);
+            }
+        });
+        var reset=0;
+        var leftPos=[31,40.2,49.4,31,40.2,49.4,31,40.2,49.4];
+        var topPos =[5,5,5,24,24,24,43,43,43];
+        var arr = [];
+        function rando() 
         {
-            $(".button").show();
-            $(this).prop("readonly", true);
-        }
-    });
-    var reset=0;
-    var leftPos=[31,40.2,49.4,31,40.2,49.4,31,40.2,49.4];
-    var topPos =[5,5,5,24,24,24,43,43,43];
-    var arr = [];
-    function rando() 
-    {
-        while(arr.length < 9)
-        {
-          var randomnumber=Math.ceil(Math.random()*9);
-          var found=false;
-          for(var i=0;i<arr.length;i++)
-          {
-            if(arr[i]==randomnumber){found=true;break}
-          }
-          if(!found)arr[arr.length]=randomnumber;
+            while(arr.length < 9)
+            {
+              var randomnumber=Math.ceil(Math.random()*9);
+              var found=false;
+              for(var i=0;i<arr.length;i++)
+              {
+                if(arr[i]==randomnumber){found=true;break}
+            }
+            if(!found)arr[arr.length]=randomnumber;
         }
     }
     if(reset==0)
@@ -195,20 +193,20 @@ $(document).ready(function(){
         }
         function check()
         {
-        pos1 = $("#container1").position();
-        pos2 = $("#container2").position();
-        pos3 = $("#container3").position();
-        pos4 = $("#container4").position();
-        pos5 = $("#container5").position();
-        pos6 = $("#container6").position();
-        pos7 = $("#container7").position();
-        pos8 = $("#container8").position();
-        pos9 = $("#container9").position();
-        if(pos1.left<pos2.left && pos2.left<pos3.left && pos4.left<pos5.left && pos5.left<pos6.left && pos7.left<pos8.left && pos8.left<pos9.left  )
-        {
-            if(pos1.top<pos4.top && pos4.top<pos7.top && pos2.top<pos5.top && pos5.top<pos8.top && pos3.top<pos6.top && pos6.top<pos9.top  )
+            pos1 = $("#container1").position();
+            pos2 = $("#container2").position();
+            pos3 = $("#container3").position();
+            pos4 = $("#container4").position();
+            pos5 = $("#container5").position();
+            pos6 = $("#container6").position();
+            pos7 = $("#container7").position();
+            pos8 = $("#container8").position();
+            pos9 = $("#container9").position();
+            if(pos1.left<pos2.left && pos2.left<pos3.left && pos4.left<pos5.left && pos5.left<pos6.left && pos7.left<pos8.left && pos8.left<pos9.left  )
             {
-                        $.ajax({
+                if(pos1.top<pos4.top && pos4.top<pos7.top && pos2.top<pos5.top && pos5.top<pos8.top && pos3.top<pos6.top && pos6.top<pos9.top  )
+                {
+                    $.ajax({
                         url: "../controller.php",
                         data : {functionname:"nextlevel",answer:"successful"},
                         type: "POST",
@@ -217,11 +215,11 @@ $(document).ready(function(){
                             alert("moved to " + result);
                             window.location = result+".php";
                         }
-                    
-                });
+                        
+                    });
+                }
             }
         }
-    }
     });
 
 });

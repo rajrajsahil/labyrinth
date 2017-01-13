@@ -74,17 +74,17 @@ include "navheader.php";
                 	<img class="creditImg" src="images/shubham.jpg" />
                 	<h2>Shubham Kumar</h2>
                 	<div class="memberSocial">
-                		<a href="#"  target="_blank">
+                		<a href="https://www.facebook.com/profile.php?id=100005643183714"  target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-facebook-f" style="font-size:32px"></i>
 		                    </div>
 		                </a>
-		                <a href="#"  target="_blank">
+		                <a href="https://twitter.com/follow_shubham"  target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-twitter" style="font-size:32px"></i>
 		                    </div>
 		                </a>
-		                <a href="#" target="_blank">
+		                <a href="https://www.linkedin.com/in/shubham-kumar-a8b784a8?trk=hp-identity-name" target="_blank">
 		                    <div class="socialDiv">
 		                        <i class="fa fa-linkedin" style="font-size:32px"></i>
 		                    </div>
