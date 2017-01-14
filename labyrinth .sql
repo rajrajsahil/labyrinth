@@ -53,7 +53,7 @@ INSERT INTO `level_answer` (`levelname`, `level`, `answer`) VALUES
 ('av', 14, 'amanverma'),
 ('incomplete', 15, 'successful'),
 ('robbery', 16, 'mumbai'),
-('khan', 17, 'zindagi'),
+('actor', 17, 'zindagi'),
 ('card', 18, 'sattepesatta'),
 ('orphan', 19, 'shekharkapur'),
 ('akshaykr', 20, 'khiladi420');

@@ -1,4 +1,7 @@
 $(document).ready(function (argument) {
+	if(screen.width<1025){
+		window.location="laby7.php";
+	}
 
 	var credentials, password,username,password1,email,contact,functionname,password2,placeholder;
 	var signupflag=0;
