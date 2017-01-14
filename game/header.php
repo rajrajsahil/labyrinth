@@ -80,7 +80,7 @@
       </nav>
 
       <div class="sideLogo">
-         <h1 class="labyrinth"><a href="#">Labyrinth 7.0</a></h1>
+         <h1 class="labyrinth"><a href="index.php">Labyrinth 7.0</a></h1>
       </div>
 
       <!-- For incorrect answer -->

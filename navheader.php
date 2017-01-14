@@ -20,12 +20,12 @@
                   <li><a href="about.php">About</a></li>
                   <li><a href="rules.php">Rules</a></li>
                   <li><a href="credits.php">Credits</a></li>
-                  <li><a href="collapsible.html">Forum</a></li>
+                  <li><a href="https://www.facebook.com/sf.labyrinth/app/202980683107053/" target="_blank">Forum</a></li>
                </ul>
             </div>
          </div>   
       </nav>
 
       <div class="sideLogo">
-         <h1 class="labyrinth"><a href="#">Labyrinth 7.0</a></h1>
+         <h1 class="labyrinth"><a href="index.php">Labyrinth 7.0</a></h1>
       </div>
