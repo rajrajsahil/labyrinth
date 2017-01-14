@@ -96,11 +96,11 @@ $(document).ready(function (argument) {
 						       		//alert(result);
 						       		if(result>20)
 						       		{
-						       			window.location = "levels/congratulations.php";
+						       			window.location = "game/congratulations.php";
 						       		}
 						       		else
 						       		{
-						       			window.location.href = "levels/"+result+".php";
+						       			window.location.href = "game/"+result+".php";
 						       			//$(location).attr("href", "level"+result+".php");
 						       		}
 						       		//alert(glevel);
@@ -383,8 +383,7 @@ $(document).ready(function (argument) {
 					           console.log(result);
 					           if(result==1)
 					           {
-		                           	//alert("new data added");
-					       			window.location = "levels/power.php";
+					       			window.location = "game/meetAgain.php";
 					       	   }
                      }
 		

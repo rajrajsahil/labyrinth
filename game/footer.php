@@ -23,17 +23,17 @@
        </div>
      </div>
      <div class="social">
-      <a href="#">
+      <a href="https://www.facebook.com/springfest.iitkgp" target="_blank">
        <div class="socialDiv">
         <i class="fa fa-facebook-f" style="font-size:32px"></i>
       </div>
     </a>
-    <a href="#">
+    <a href="https://twitter.com/springfest_kgp" target="_blank">
      <div class="socialDiv">
       <i class="fa fa-twitter" style="font-size:32px"></i>
     </div>
   </a>
-  <a href="#">
+  <a href="https://www.youtube.com/user/SpringFestForever?spfreload=10" target="_blank">
    <div class="socialDiv">
     <i class="fa fa-youtube-play" style="font-size:32px"></i>
   </div>

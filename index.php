@@ -4,10 +4,10 @@
    {
        
       if($_SESSION["level"]>20){
-         header ("Location: levels/congratulations.php");
+         header ("Location: game/congratulations.php");
       }
       else {
-         header ("Location:"."levels/".$_SESSION['levelname'].".php");
+         header ("Location:"."game/".$_SESSION['levelname'].".php");
       }
    }
 ?>
@@ -164,12 +164,12 @@
                   <i class="fa fa-facebook-f" style="font-size:32px"></i>
                </div>
             </a>
-            <a href="https://twitter.com/springfest.iitkgp" target="_blank">
+            <a href="https://twitter.com/springfest_kgp" target="_blank">
                <div class="socialDiv">
                   <i class="fa fa-twitter" style="font-size:32px"></i>
                </div>
             </a>
-            <a href="#">
+            <a href="https://www.youtube.com/user/SpringFestForever?spfreload=10" target="_blank">
                <div class="socialDiv">
                   <i class="fa fa-youtube-play" style="font-size:32px"></i>
                </div>
