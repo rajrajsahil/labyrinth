@@ -4,10 +4,10 @@
    {
        
       if($_SESSION["level"]>20){
-         header ("Location: levels/congratulations.php");
+         header ("Location: game/congratulations.php");
       }
       else {
-         header ("Location:"."levels/".$_SESSION['levelname'].".php");
+         header ("Location:"."game/".$_SESSION['levelname'].".php");
       }
    }
 ?>
@@ -101,6 +101,10 @@
               </div>
           </div>
           <div class="loginPage">
+          <!-- For incorrect data -->
+              <div id="incorrect_data">
+                 <strong>Incorrect details</strong>
+              </div>
               <div class="buttonCont">
                 <input id='user-credentials' type='text' class="inputType"  autofocus="autofocus"  placeholder="  Username.." >
               </div>
@@ -127,7 +131,7 @@
                </div>
                <div class="buttonCont signUpCont">
                   <input type="password" id='password' class="inputType" placeholder="  Passcode..">
-               </div>
+               </div> 
                <div class="buttonCont signUpCont">
                   <input type="password" id='re-password' class="inputType" placeholder="  Verify Passcode..">
                </div>
@@ -155,17 +159,17 @@
       </div>
       <div class="sidePanel">
         <div class="social">
-            <a href="#">
+            <a href="https://www.facebook.com/springfest.iitkgp" target="_blank">
                <div class="socialDiv">
                   <i class="fa fa-facebook-f" style="font-size:32px"></i>
                </div>
             </a>
-            <a href="#">
+            <a href="https://twitter.com/springfest_kgp" target="_blank">
                <div class="socialDiv">
                   <i class="fa fa-twitter" style="font-size:32px"></i>
                </div>
             </a>
-            <a href="#">
+            <a href="https://www.youtube.com/user/SpringFestForever?spfreload=10" target="_blank">
                <div class="socialDiv">
                   <i class="fa fa-youtube-play" style="font-size:32px"></i>
                </div>
@@ -178,7 +182,7 @@
    <script src="script/main.js" ></script>
    <script src="script/mouse.parallax.js"></script>
    <script src="script/script.js"></script>
-   <script src="script/ajaxGlobalHandler.js"></script>
+   <script src="script/AjaxGlobalHandler.js"></script>
 
 </body>
 </html>

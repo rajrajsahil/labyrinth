@@ -23,6 +23,37 @@ body{
 	top: -16.9474%; 
 	bottom: -16.9474%; 
 }
+#incorrect_data{
+         position: absolute;
+         top:25%;
+         left:68%;
+         z-index:2; 
+         color:red;
+         height:50px;
+         opacity: 0;
+         -webkit-animation-name: incorrect_animation; /* Safari 4.0 - 8.0 */
+         -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+         animation-name: incorrect_animation;
+         animation-duration: 3s;
+         font-size: 20px;
+         display:none;
+         background-color: rgba(0,0,0,0.2);
+         border-radius: 10px;
+         padding-left: 20px;
+         padding-right: 20px;
+         padding-top: 10px;
+         color:rgb(255,255,255);
+}
+ @-webkit-keyframes incorrect_animation {
+         0%   {opacity:0; top:25%;}
+         50%  {opacity:1; top:17%;}
+         100% {opacity:0; top:10%;}
+}         
+@keyframes incorrect_animation {
+         0%   {opacity:0; top:25%;}
+         50%  {opacity:1; top:17%;}
+         100% {opacity:0; top:10%;}
+}
 .mouse-bg {
 	left: 0;
 	right: 0;
@@ -513,13 +544,7 @@ input:focus:-ms-input-placeholder {
 	font-size:25px;
 }
 /* ******************** CSS of rules page ******************************* */
-.aboutHeading ol{
-	padding:0 100px;
-}
-.aboutHeading ol li{
-	font-weight: 100;
-	font-size: 17px;
-}
+
 .aboutHeading ol li a{
 	color:white;
 	font-weight: 400;
