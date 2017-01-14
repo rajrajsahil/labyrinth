@@ -70,6 +70,7 @@ $(document).ready(function (argument) {
         	$("#user-password").css({"border": "2px solid red"});
         }
         else{
+        		$("#login-button").attr("disabled", true);
 				$.ajax({
 						url: "controller.php",
 						data : {credentials : credentials, 
@@ -106,25 +107,29 @@ $(document).ready(function (argument) {
 						       		//alert(glevel);
 						       		//alert("invalid input");
 						         	}
+						    $("#login-button").attr("disabled", false);  
 						}
 					
 				});
+				
 		}
 	});
 	// ********************************SIGN IN VALIDATION AND SIGNIN FUNCTION OVER ***************************************************************
 	$('#logout-button').click(function(event) {		       
-         
+     	$("#logout-button").attr("disabled", true);    
 		$.ajax({
 				url: "../controller.php",
 				data : {functionname:"logout"},
 				type: "POST",
 				success: function (result) {
-
+					$("#logout-button").attr("disabled", false);
 					window.location = '../index.php';
 			     }
-		}); 
+		});
+		
 	});
-	$('#goBack').click(function(event) {		       
+	$('#goBack').click(function(event) {
+	$("#goBack").attr("disabled", true); 		       
 		$.ajax({
 				url: "../controller.php",
 				data : {functionname:"logout"},
@@ -132,6 +137,7 @@ $(document).ready(function (argument) {
 				success: function (result) {
 
 					window.location = '../index.php';
+					$("#goBack").attr("disabled", true);
 			     }
 		}); 
 	});	
@@ -371,7 +377,8 @@ $(document).ready(function (argument) {
 		}
 		if(signupflag==1)
 		{
-		 $.ajax({
+			$("#signup-button").attr("disabled", true);
+		 	$.ajax({
 					url: "controller.php",
 					data : {username : username, 
 					password1 : password1,
@@ -385,6 +392,7 @@ $(document).ready(function (argument) {
 					           {
 					       			window.location = "game/meetAgain.php";
 					       	   }
+					       	   $("#signup-button").attr("disabled", false);
                      }
 		
 						
@@ -424,7 +432,7 @@ $(document).ready(function (argument) {
         console.log(answer);
         //alert("hello");
         if(answer!='')
-        {
+        {	$(".level-answerbutton").attr("disabled", false);
 			$.ajax({
 				url: "../controller.php",
 				data : {functionname:"nextlevel",answer:answer},
@@ -452,7 +460,8 @@ $(document).ready(function (argument) {
 						
 						window.location = result+".php";
 						
-					} 
+					}
+					$(".level-answerbutton").attr("disabled", false); 
 
 				}
 					
