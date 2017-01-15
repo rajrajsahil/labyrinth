@@ -474,8 +474,10 @@ $(document).ready(function (argument) {
 //******************************Added an event to submit the answer if a user press enter***************************************************
 	$(document).keypress(function(e) {
 	    if(e.which == 13) {
-	        $(".button").click();
+	        $(".level-answerbutton").click();
 	    }
 	});	
+
+
 
 });		
