@@ -1,16 +1,3 @@
-<?php
-session_start();
-if (isset($_SESSION['username']))
-{
-
-  if($_SESSION["level"]>20){
-   header ("Location: game/congratulations.php");
- }
- else {
-   header ("Location:"."game/".$_SESSION['levelname'].".php");
- }
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,6 +41,18 @@ if (isset($_SESSION['username']))
     margin-top:1vw;
     margin-left:1vw;
   }
+  #znetLogo{
+    position:absolute;
+    bottom:2vh;
+    left:2vw;
+    z-index:50;
+  }
+  #kasLogo{
+    position:absolute;
+    bottom:2vh;
+    left:15vw;
+    z-index:50;
+  }
 
 
 
@@ -76,9 +75,11 @@ if (isset($_SESSION['username']))
     <div class="lab7 introtext">7.0</div>
     <div class="available introtext">We are only available on laptops and Pcs.</div>
   </div>
-
+  <div id="znetLogo"><a href="https://www.znetlive.com/" target="_blank"><img style="width:10vw;height:5vw;" src="images/znetlivelogo.png"></a></div>
+  <div id="kasLogo"><a <a href="https://www.kaspersky.co.in/" target="_blank"><img style="width:12vw;height:5vw;" src="images/kaspersky.png"></a></div>
 
   <script src="script/jquery.js"></script>
 
 </body>
 </html>
+
